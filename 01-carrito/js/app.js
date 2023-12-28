@@ -69,9 +69,9 @@ function carritoHTML() {
             <td>
                 <img src="${curso.imagen}" width="100">
             </td>
-            <td>
-                ${curso.titulo}
-            </td>
+            <td>${curso.titulo}</td>
+            <td>${curso.precio}</td>
+            <td>${curso.cantidad}</td>
         `;
         // Insertando cada <tr> -> <tbody> a su padre <table>
         contenedorCarrito.appendChild(row);
