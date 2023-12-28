@@ -37,14 +37,19 @@ function agregarCurso(e) {
 function eliminarCurso(e) {
     // Detectando el botón para eliminar y previniendo event bubbling con delegation
     if (e.target.classList.contains('borrar-curso')) {
-        console.log(e.target.getAttribute('data-id'));
+        const cursoId = e.target.getAttribute('data-id');
+        // Iterando sobre cada curso del array y evite traer el que se desea eliminar ('cursoId')
+        articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
+        console.log(articulosCarrito);
+
+        // Actualizar el HTML del carrito
+        carritoHTML();
     }
 }
 
 // Lee el contenido de .card y extrae lo necesario para mostrar en el carrito
 function leerDatosCurso(curso) {
-    // obteniendo el padre el curso seleccionado:
-    // console.log(curso);
+    // obteniendo el padre el curso seleccionado: clg(curso);
 
     // crear un objeto con el contenido del curso seleccionado
     const infoCurso = {
