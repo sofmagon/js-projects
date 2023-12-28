@@ -30,5 +30,17 @@ function agregarCurso(e) {
 
 // Lee el contenido de .card y extrae lo necesario para mostrar en el carrito
 function leerDatosCurso(curso) {
+    // obteniendo el padre el curso seleccionado
     console.log(curso);
+
+    // crar un objeto con el contenido del curso seleccionado
+    const infoCurso = {
+        imagen: curso.querySelector('img').src,
+        titulo: curso.querySelector('h4').textContent,
+        precio: curso.querySelector('.precio span').textContent,
+        id: curso.querySelector('a').getAttribute('data-id'),
+        cantidad: 1
+    }
+
+    console.log(infoCurso);
 }
