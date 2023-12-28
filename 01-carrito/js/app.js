@@ -9,9 +9,8 @@ let articulosCarrito = [];
 
 // Eventos
 cargarEventListener();
-
 function cargarEventListener() {
-    // Cuando agregas un curso presionando 'agregar al carrito'
+    // Cuando se agrega un curso presionando 'agregar al carrito'
     listaCursos.addEventListener('click', agregarCurso);
 }
 
@@ -75,5 +74,8 @@ function carritoHTML() {
 
 // Elimina cursos del <tbody>
 function limpiarHTML() {
-    contenedorCarrito.innerHTML = '';
+    // Mientras al menos tenga un elemento
+    while (contenedorCarrito.firstChild) {
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    }
 }
