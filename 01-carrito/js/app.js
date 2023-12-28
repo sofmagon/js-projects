@@ -60,13 +60,19 @@ function carritoHTML() {
 
     // Iterando sobre cada curso seleccionado para generar su información e incrustarla en el carrito
     articulosCarrito.forEach(curso => {
+        // Observando el objeto para tomar los elementos necesarios
+        console.log(curso);
+
+        // Generando el HTML necesario para mostrar en el carrito
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
+                <img src="${curso.imagen}" width="100">
+            </td>
+            <td>
                 ${curso.titulo}
             </td>
-            `;
-
+        `;
         // Insertando cada <tr> -> <tbody> a su padre <table>
         contenedorCarrito.appendChild(row);
     });
