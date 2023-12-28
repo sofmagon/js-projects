@@ -12,6 +12,9 @@ cargarEventListener();
 function cargarEventListener() {
     // Cuando se agrega un curso presionando 'agregar al carrito'
     listaCursos.addEventListener('click', agregarCurso);
+
+    // Elimina cursos del carrito
+    carrito.addEventListener('click', eliminarCurso);
 }
 
 // Funciones
@@ -30,10 +33,18 @@ function agregarCurso(e) {
     }
 }
 
+// Elimina cursos del carrito
+function eliminarCurso(e) {
+    // Detectando el botón para eliminar y previniendo event bubbling con delegation
+    if (e.target.classList.contains('borrar-curso')) {
+        console.log(e.target.getAttribute('data-id'));
+    }
+}
+
 // Lee el contenido de .card y extrae lo necesario para mostrar en el carrito
 function leerDatosCurso(curso) {
-    // obteniendo el padre el curso seleccionado
-    console.log(curso);
+    // obteniendo el padre el curso seleccionado:
+    // console.log(curso);
 
     // crear un objeto con el contenido del curso seleccionado
     const infoCurso = {
