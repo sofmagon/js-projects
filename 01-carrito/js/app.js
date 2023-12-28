@@ -36,7 +36,7 @@ function leerDatosCurso(curso) {
     // obteniendo el padre el curso seleccionado
     console.log(curso);
 
-    // crar un objeto con el contenido del curso seleccionado
+    // crear un objeto con el contenido del curso seleccionado
     const infoCurso = {
         imagen: curso.querySelector('img').src,
         titulo: curso.querySelector('h4').textContent,
@@ -49,4 +49,21 @@ function leerDatosCurso(curso) {
 
     // La lógica de usar el spread operator es con el fin de preservar los elementos previos al ir agregando o eliminando
     articulosCarrito = [...articulosCarrito, infoCurso];
+
+    carritoHTML();
+}
+
+// Muestra el carrito de compras en el HTML, cada curso será incrustado dentro de <tbody>
+function carritoHTML() {
+    articulosCarrito.forEach(curso => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                ${curso.titulo}
+            </td>
+        `;
+
+        // Insertando cada <tr> -> <tbody> a su padre <table>
+        contenedorCarrito.appendChild(row);
+    });
 }
