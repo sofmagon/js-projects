@@ -21,7 +21,7 @@ function agregarCurso(e) {
 
     // Click en el elemento con la clase .agregar-carrito <a> y evitando event bubbling...
     if (e.target.classList.contains('agregar-carrito')) {
-        // ...conocer el padre del botón: .info-card, para leer el contenido y mostrarlo en el carrito (nombre, precio e imagen)
-        console.log(e.target.parentElement);
+        // ...conocer el padre del botón: .info-card y su padre a su vez: .card, para leer el contenido y mostrarlo en el carrito (nombre, precio e imagen)
+        console.log(e.target.parentElement.parentElement);
     }
 }
