@@ -15,6 +15,8 @@ function cargarEventListener() {
 }
 
 // Funciones
+
+// Agregando cursos al carrito
 function agregarCurso(e) {
     // Evitando la acción natural del botón (#)
     e.preventDefault();
