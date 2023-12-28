@@ -63,7 +63,7 @@ function carritoHTML() {
         // Observando el objeto para tomar los elementos necesarios
         console.log(curso);
 
-        // Generando el HTML necesario para mostrar en el carrito
+        // Generando el HTML necesario para mostrar en el carrito y un botón para remover cursos
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
@@ -72,6 +72,9 @@ function carritoHTML() {
             <td>${curso.titulo}</td>
             <td>${curso.precio}</td>
             <td>${curso.cantidad}</td>
+            <td>
+                <a href="#" class="borrar-curso" data-id="${curso.id}"> X </a>
+            </td>
         `;
         // Insertando cada <tr> -> <tbody> a su padre <table>
         contenedorCarrito.appendChild(row);
