@@ -44,8 +44,11 @@ function leerDatosCurso(curso) {
         cantidad: 1
     }
 
-    // Agregando elementos al array del carrito
+    // Revisa si un curso ya existe en el carrito. Compara si el curso seleccionado es exactamente igual al que ya está agregado
+    const existe = articulosCarrito.some(curso => infoCurso.id === curso.id);
+    console.log(existe);
 
+    // Agregando elementos al array del carrito
     // La lógica de usar el spread operator es con el fin de preservar los elementos previos al ir agregando o eliminando
     articulosCarrito = [...articulosCarrito, infoCurso];
 
