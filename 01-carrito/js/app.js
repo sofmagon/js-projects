@@ -56,7 +56,8 @@ function leerDatosCurso(curso) {
 // Muestra el carrito de compras en el HTML, cada curso será incrustado dentro de <tbody>
 function carritoHTML() {
 
-    // Limpiar HTML previo (evitar repetidos)
+    // Limpiar HTML previo, evitando copias innecesarias por el spread operator
+    limpiarHTML();
 
     // Iterando sobre cada curso seleccionado para generar su información e incrustarla en el carrito
     articulosCarrito.forEach(curso => {
