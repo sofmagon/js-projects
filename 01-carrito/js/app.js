@@ -24,6 +24,11 @@ function agregarCurso(e) {
         // ...conocer el padre del botón: .info-card y su padre a su vez: .card, para leer el contenido y mostrarlo en el carrito (nombre, precio e imagen)
         const cursoSeleccionado = e.target.parentElement.parentElement;
 
-        leerDatosCurso();
+        leerDatosCurso(cursoSeleccionado);
     }
+}
+
+// Lee el contenido de .card y extrae lo necesario para mostrar en el carrito
+function leerDatosCurso(curso) {
+    console.log(curso);
 }
