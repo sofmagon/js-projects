@@ -72,3 +72,8 @@ function carritoHTML() {
         contenedorCarrito.appendChild(row);
     });
 }
+
+// Elimina cursos del <tbody>
+function limpiarHTML() {
+    contenedorCarrito.innerHTML = '';
+}
