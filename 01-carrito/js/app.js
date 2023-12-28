@@ -46,11 +46,30 @@ function leerDatosCurso(curso) {
 
     // Revisa si un curso ya existe en el carrito. Compara si el curso seleccionado es exactamente igual al que ya está agregado
     const existe = articulosCarrito.some(curso => infoCurso.id === curso.id);
-    console.log(existe);
 
-    // Agregando elementos al array del carrito
-    // La lógica de usar el spread operator es con el fin de preservar los elementos previos al ir agregando o eliminando
-    articulosCarrito = [...articulosCarrito, infoCurso];
+    if (existe) {
+        // Actualizar la cantidad
+        // -> La lógica de usar .map es que genera un nuevo array. Iterará sobre todos los elementos del carrito
+        const cursos = articulosCarrito.map(curso => {
+            // Cuando encuentre cuál es el que ya está agregado aumentará la cantidad del mismo
+            if (infoCurso.id === curso.id) {
+                curso.cantidad++;
+                // return porque la nueva cantidad se le asignará al nuevo array 'cursos'
+                return curso;
+            } else {
+                // retorna los cursos únicos que el usuario ya seleccionó previamente
+                return curso;
+            }
+        });
+
+        // Array actualizado ✔️
+        // -> La lógica de usar el spread operator es con el fin de preservar los elementos previos al ir agregando o eliminando
+        articulosCarrito = [...articulosCarrito, cursos];
+
+    } else {
+        // Agregando elementos únicos al array del carrito
+        articulosCarrito = [...articulosCarrito, infoCurso];
+    }
 
     carritoHTML();
 }
