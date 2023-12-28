@@ -64,7 +64,7 @@ function leerDatosCurso(curso) {
 
         // Array actualizado ✔️
         // -> La lógica de usar el spread operator es con el fin de preservar los elementos previos al ir agregando o eliminando
-        articulosCarrito = [...articulosCarrito, cursos];
+        articulosCarrito = [...cursos];
 
     } else {
         // Agregando elementos únicos al array del carrito
