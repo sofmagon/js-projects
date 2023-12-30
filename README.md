@@ -10,10 +10,10 @@
 
 ## 🍕 Projects list
 
-| # Number | Project name                       | Live site                            |
-| -------- | ---------------------------------- | ------------------------------------ |
-| 01       | [Carrito de compras](./01-carrito) | [🚀](https://01-carrito.netlify.app/) |
-|          |                                    |                                      |
+| # Number | Project name                                 | Live site                            |
+| -------- | -------------------------------------------- | ------------------------------------ |
+| 01       | [Carrito de compras](./01-carrito)           | [🚀](https://01-carrito.netlify.app/) |
+| 02       | [Simulación: envío email](./02-enviar-email) |                                      |
 
 
 
