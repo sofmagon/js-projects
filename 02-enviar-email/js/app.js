@@ -57,4 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
             alerta.remove()
         }
     }
+
+    function validarEmail(email) {
+        const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    }
 });
