@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // console.log(e.target.id);
 
         if (e.target.value.trim() === '') {
-
+            mostrarAlerta(`El campo ${e.target.id} es obligatorio`);
         } else {
 
         }
