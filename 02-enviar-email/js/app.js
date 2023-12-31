@@ -33,15 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // Evaluando el contenido de todos los campos
         if (e.target.value.trim() === '') {
             mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
+            // Reiniciando el valor del objeto que haya sido removido del formulario
+            email[e.target.name] = '';
             comprobarEmail();
-            // return detiene la ejecución del código una vez disparada la alerta
             return;
         }
 
-        // Verificar si el email ingresado tiene un formato válido
-        // La segunda condición se niega para evaluar sobre un resultado false
+        // Verificar si el email ingresado tiene un formato válido. La segunda condición se niega para evaluar sobre un resultado false
         if (e.target.id === 'email' && !validarEmail(e.target.value)) {
             mostrarAlerta('Email inválido', e.target.parentElement);
+            email[e.target.name] = '';
             comprobarEmail();
             return;
         }
@@ -96,5 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             btnSubmit.classList.remove('opacity-50');
             btnSubmit.disabled = false;
         }
+
+        console.log(email);
     }
 });
