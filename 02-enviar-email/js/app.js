@@ -21,15 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function validar(e) {
-        // Conocer lo que escribió el usuario
-        // console.log(e.target.value);
+        /* Conocer lo que escribió el usuario
+        console.log(e.target.value);
 
-        // Conocer qué elemento disparó la alerta
-        // console.log(e.target.id);
+        Conocer qué elemento disparó la alerta
+        console.log(e.target.id);
 
-        // Conocer el elemento padre del input que dispara la alerta
-        // console.log(e.target.parentElement);
+        Conocer el elemento padre del input que dispara la alerta
+        console.log(e.target.parentElement); */
 
+        // Evaluando el contenido de todos los campos
         if (e.target.value.trim() === '') {
             mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
             comprobarEmail();
