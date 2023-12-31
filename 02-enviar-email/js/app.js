@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Conocer lo que escribió el usuario
         // console.log(e.target.value);
 
-        if (e.target.value === '') {
+        if (e.target.value.trim() === '') {
             console.log('...está vacío');
         } else {
             console.log('...tiene contenido');
