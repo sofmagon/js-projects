@@ -16,17 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
         // Conocer lo que escribió el usuario
         // console.log(e.target.value);
 
+        // Conocer qué elemento disparó la alerta
+        // console.log(e.target.id);
+
         if (e.target.value.trim() === '') {
-            mostrarAlerta();
+
         } else {
 
         }
     }
 
-    function mostrarAlerta() {
+    function mostrarAlerta(mensaje) {
         // Generar alerta en HTML
         const error = document.createElement('P');
-        error.textContent = 'Hubo un error';
+        error.textContent = mensaje;
         error.classList.add('bg-red-600', 'text-white', 'p-2', 'text-center');
 
         // Inyectar el error al formulario
