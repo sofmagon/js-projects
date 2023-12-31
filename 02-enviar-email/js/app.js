@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (e.target.value.trim() === '') {
             mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
+            comprobarEmail();
             // return detiene la ejecución del código una vez disparada la alerta
             return;
         }
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // La segunda condición se niega para evaluar sobre un resultado false
         if (e.target.id === 'email' && !validarEmail(e.target.value)) {
             mostrarAlerta('Email inválido', e.target.parentElement);
+            comprobarEmail();
             return;
         }
 
