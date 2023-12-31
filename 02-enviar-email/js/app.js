@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        limpiarAlerta();
+        limpiarAlerta(e.target.parentElement);
     }
 
     function mostrarAlerta(mensaje, referencia) {
@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
         referencia.appendChild(error);
     }
 
-    function limpiarAlerta() {
-
+    function limpiarAlerta(referencia) {
+        const alerta = referencia.querySelector('.bg-red-600');
+        if (alerta) {
+            alerta.remove()
+        }
     }
 });
