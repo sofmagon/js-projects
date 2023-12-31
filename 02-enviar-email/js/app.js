@@ -83,4 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultado = regex.test(email);
         return resultado;
     }
+
+    function comprobarEmail() {
+        // Retornará un array con los valores del objeto; al ser un array el método .includes() verificará si al menos uno de ellos está vacío
+        console.log(Object.values(email).includes(''));
+    }
 });
