@@ -19,20 +19,24 @@ document.addEventListener('DOMContentLoaded', function () {
         // Conocer qué elemento disparó la alerta
         // console.log(e.target.id);
 
+        // Conocer el elemento padre del input que dispara la alerta
+        // console.log(e.target.parentElement);
+
         if (e.target.value.trim() === '') {
-            mostrarAlerta(`El campo ${e.target.id} es obligatorio`);
+            mostrarAlerta(`El campo ${e.target.id} es obligatorio`, e.target.parentElement);
         } else {
 
         }
     }
 
-    function mostrarAlerta(mensaje) {
+    function mostrarAlerta(mensaje, referencia) {
         // Generar alerta en HTML
         const error = document.createElement('P');
         error.textContent = mensaje;
         error.classList.add('bg-red-600', 'text-white', 'p-2', 'text-center');
 
-        // Inyectar el error al formulario
-        formulario.appendChild(error);
+        // Inyectar el error al formulario a través de la referencia
+        //? referencia: traversing the DOM (e.target.parentElement)
+        referencia.appendChild(error);
     }
 });
