@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
     inputAsunto.addEventListener('blur', validar);
     inputMensaje.addEventListener('blur', validar);
 
+    // Objeto: mensaje a enviar
+    const email = {
+        email: '',
+        asunto: '',
+        mensaje: ''
+    }
+
     function validar(e) {
         // Conocer lo que escribió el usuario
         // console.log(e.target.value);
