@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        // Verificar si el email ingresado tiene un formato válido
+        // La segunda condición se niega para evaluar sobre un resultado false
+        if (e.target.id === 'email' && !validarEmail(e.target.value)) {
+            mostrarAlerta('Email inválido', e.target.parentElement);
+            return;
+        }
+
         limpiarAlerta(e.target.parentElement);
     }
 
@@ -60,5 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validarEmail(email) {
         const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+        const resultado = regex.test(email);
+        return resultado;
     }
 });
