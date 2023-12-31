@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function mostrarAlerta() {
-
-
+        // Generar alerta en HTML
+        const error = document.createElement('P');
+        error.textContent = 'Hubo un error';
     }
 });
