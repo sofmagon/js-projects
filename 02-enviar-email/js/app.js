@@ -27,5 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Generar alerta en HTML
         const error = document.createElement('P');
         error.textContent = 'Hubo un error';
+
+        // Inyectar el error al formulario
+        formulario.appendChild(error);
     }
 });
