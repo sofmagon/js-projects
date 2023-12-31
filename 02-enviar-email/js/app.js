@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputEmail = document.querySelector('#email');
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
+    const formulario = document.querySelector('#formulario');
 
     // Eventos
     inputEmail.addEventListener('blur', validar);
@@ -16,9 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // console.log(e.target.value);
 
         if (e.target.value.trim() === '') {
-            console.log('...está vacío');
+            mostrarAlerta();
         } else {
-            console.log('...tiene contenido');
+
         }
+    }
+
+    function mostrarAlerta() {
+
+
     }
 });
