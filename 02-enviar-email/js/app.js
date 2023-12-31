@@ -43,6 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         limpiarAlerta(e.target.parentElement);
+
+        // Asignar la información ingresada al objeto, en este punto se han aprobado todas las validaciones.
+        email[e.target.name] = e.target.value.trim().toLowerCase();
+
+        // Comprobar el objeto
+        comprobarEmail();
     }
 
     function mostrarAlerta(mensaje, referencia) {
