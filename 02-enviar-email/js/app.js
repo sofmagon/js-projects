@@ -92,12 +92,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function comprobarEmail() {
         // Retornará un array con los valores del objeto; al ser un array el método .includes() verificará si al menos uno de ellos está vacío
         if (Object.values(email).includes('')) {
-
+            btnSubmit.classList.add('opacity-50');
+            btnSubmit.disabled = true;
         } else {
             btnSubmit.classList.remove('opacity-50');
             btnSubmit.disabled = false;
         }
 
-        console.log(email);
+        // console.log(email);
     }
 });
