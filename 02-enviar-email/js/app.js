@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validar(e) {
         // Conocer lo que escribió el usuario
-        console.log(e.target.value);
+        // console.log(e.target.value);
+
+        if (e.target.value === '') {
+            console.log('...está vacío');
+        } else {
+            console.log('...tiene contenido');
+        }
     }
 });
