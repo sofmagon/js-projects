@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function mostrarAlerta(mensaje, referencia) {
+        // Comprobar si ya existe una alerta: se debe acotar la búsqueda sólo al input que dispara la alerta con la referencia: e.target.parentElement
+        const alerta = referencia.querySelector('.bg-red-600');
+        if (alerta) {
+            alerta.remove()
+        }
+
         // Generar alerta en HTML
         const error = document.createElement('P');
         error.textContent = mensaje;
