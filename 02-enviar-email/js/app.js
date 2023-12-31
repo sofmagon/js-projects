@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
+    const btnSubmit = document.querySelector('#formulario button[type="submit"]');
 
     // Eventos
     inputEmail.addEventListener('blur', validar);
@@ -86,6 +87,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function comprobarEmail() {
         // Retornará un array con los valores del objeto; al ser un array el método .includes() verificará si al menos uno de ellos está vacío
-        console.log(Object.values(email).includes(''));
+        if (Object.values(email).includes('')) {
+
+        } else {
+            btnSubmit.classList.remove('opacity-50');
+            btnSubmit.disabled = false;
+        }
     }
 });
