@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
-    const btnReset = document.querySelector('#formulario button[type="reset"]')
+    const btnReset = document.querySelector('#formulario button[type="reset"]');
 
     // Eventos
     inputEmail.addEventListener('input', validar);
@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Comprobar el objeto para aplicar las clases al botón
         comprobarEmail();
     });
+    formulario.addEventListener('submit', enviarEmail);
+
+    function enviarEmail(e) {
+        e.preventDefault();
+        console.log('...enviando');
+    }
 
     // Objeto: mensaje a enviar
     const email = {
