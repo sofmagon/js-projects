@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
     inputMensaje.addEventListener('input', validar);
     btnReset.addEventListener('click', function (e) {
         e.preventDefault();
+        // Reinciar el objeto
+        email.email = '';
+        email.asunto = '';
+        email.mensaje = '';
+        // Limpiar el formulario
+        formulario.reset();
+        // Comprobar el objeto para aplicar las clases al botón
+        comprobarEmail();
     });
 
     // Objeto: mensaje a enviar
