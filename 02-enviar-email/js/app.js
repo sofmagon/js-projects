@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function enviarEmail(e) {
         e.preventDefault();
-        console.log('...enviando');
+        spinner.classList.add('flex');
+        spinner.classList.remove('hidden');
     }
 
     // Objeto: mensaje a enviar
