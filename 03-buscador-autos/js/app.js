@@ -79,7 +79,9 @@ function mostrarAutos(autos) {
 
 // Limpiar HTML previo
 function limpiarHTML() {
-
+    while (resultado.firstChild) {
+        resultado.removeChild(resultado.firstChild);
+    }
 }
 
 // Generando los años del select
