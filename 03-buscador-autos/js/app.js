@@ -2,6 +2,9 @@
 
 // Variables
 const resultado = document.querySelector('#resultado');
+const year = document.querySelector('#year');
+const max = new Date().getFullYear();
+const min = max - 10;
 
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
