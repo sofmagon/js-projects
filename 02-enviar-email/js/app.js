@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             spinner.classList.remove('flex');
             spinner.classList.add('hidden');
+            resetFormulario();
         }, 3000);
     }
 
