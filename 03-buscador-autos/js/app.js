@@ -115,6 +115,14 @@ function filtrarAuto() {
     }
 }
 
+function sinResultado() {
+    limpiarHTML();
+    const sinResultado = document.createElement('DIV');
+    sinResultado.classList.add('alerta', 'error');
+    sinResultado.textContent = 'No hay coincidencias';
+    resultado.appendChild(sinResultado);
+}
+
 function filtrarMarca(auto) {
     // Destructuring
     const { marca } = datosBusqueda;
