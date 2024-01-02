@@ -2,9 +2,15 @@
 
 // Variables
 const resultado = document.querySelector('#resultado');
+const marca = document.querySelector('#marca');
 const year = document.querySelector('#year');
 const max = new Date().getFullYear();
 const min = max - 10;
+const precioMin = document.querySelector('#minimo');
+const precioMax = document.querySelector('#maximo');
+const puertas = document.querySelector('#puertas');
+const transmision = document.querySelector('#transmision');
+const color = document.querySelector('#color');
 
 // Objeto con los parámetros de búsqueda
 const datosBusqueda = {
