@@ -47,6 +47,7 @@ form {
     margin: 0;
     padding: 2rem;
     border-bottom: 1px solid #e1e1e1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #resultado p span {
