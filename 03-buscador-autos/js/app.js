@@ -38,7 +38,8 @@ marca.addEventListener('change', e => {
 });
 
 year.addEventListener('change', e => {
-    datosBusqueda.year = e.target.value;
+    // Ojo: datos que vienen de un formulario generalmente son tipo string, habrá que convertirlo para generar la comparación correctamente
+    datosBusqueda.year = parseInt(e.target.value);
     filtrarAuto();
 });
 
@@ -110,8 +111,7 @@ function filtrarYear(auto) {
     const { year } = datosBusqueda;
 
     if (year) {
-        // Ojo: datos que vienen de un formulario generalmente son tipo string, habrá que convertirlo para generar la comparación
-        return auto.year === parseInt(year);
+        return auto.year === year;
     }
 
     return auto;
