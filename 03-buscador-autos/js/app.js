@@ -75,6 +75,11 @@ function mostrarAutos(autos) {
     });
 }
 
+// Limpiar HTML previo
+function limpiarHTML() {
+
+}
+
 // Generando los años del select
 function llenarSelect() {
     for (let i = max; i >= min; i--) {
