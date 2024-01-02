@@ -36,14 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             spinner.classList.remove('flex');
             spinner.classList.add('hidden');
-            // Reinciar el objeto
-            email.email = '';
-            email.asunto = '';
-            email.mensaje = '';
-            // Limpiar el formulario
-            formulario.reset();
-            // Comprobar el objeto para aplicar las clases al botón
-            comprobarEmail();
         }, 3000);
     }
 
@@ -134,5 +126,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // console.log(email);
+    }
+
+    function resetFormulario() {
+        // Reinciar el objeto
+        email.email = '';
+        email.asunto = '';
+        email.mensaje = '';
+        // Limpiar el formulario
+        formulario.reset();
+        // Comprobar el objeto para aplicar las clases al botón
+        comprobarEmail();
     }
 });
