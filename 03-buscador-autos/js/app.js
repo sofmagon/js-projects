@@ -54,7 +54,8 @@ maximo.addEventListener('change', e => {
 });
 
 puertas.addEventListener('change', e => {
-    datosBusqueda.puertas = e.target.value;
+    datosBusqueda.puertas = parseInt(e.target.value);
+    filtrarAuto();
 });
 
 transmision.addEventListener('change', e => {
@@ -103,7 +104,7 @@ function filtrarAuto() {
     .filter() iterará sobre el array 'autos', crea un nuevo array basado en el parámetro que es evaluado, en este caso, la función.
 
     Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
-    const resultados = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo);
+    const resultados = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas);
 
     mostrarAutos(resultados);
 }
@@ -139,6 +140,14 @@ function filtrarMaximo(auto) {
     const { maximo } = datosBusqueda;
     if (maximo) {
         return auto.precio <= maximo;
+    }
+    return auto;
+}
+
+function filtrarPuertas(auto) {
+    const { puertas } = datosBusqueda;
+    if (puertas) {
+        return auto.puertas === puertas;
     }
     return auto;
 }
