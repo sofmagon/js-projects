@@ -108,7 +108,11 @@ function filtrarAuto() {
     Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
     const resultados = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTransmision).filter(filtrarColor);
 
-    mostrarAutos(resultados);
+    if (resultados.length) {
+        mostrarAutos(resultados);
+    } else {
+        sinResultado();
+    }
 }
 
 function filtrarMarca(auto) {
