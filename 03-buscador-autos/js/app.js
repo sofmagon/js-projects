@@ -108,8 +108,10 @@ function filtrarMarca(auto) {
 
 function filtrarYear(auto) {
     const { year } = datosBusqueda;
+
     if (year) {
-        return auto.year === year;
+        // Ojo: datos que vienen de un formulario generalmente son tipo string, habrá que convertirlo para generar la comparación
+        return auto.year === parseInt(year);
     }
 
     return auto;
