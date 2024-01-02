@@ -10,15 +10,15 @@
 
 ## 🍕 Projects list
 
-| # Number | Project name                                 | Live site                                 |
-| -------- | -------------------------------------------- | ----------------------------------------- |
-| 01       | [Carrito de compras](./01-carrito)           | [🚀](https://01-carrito.netlify.app/)      |
-| 02       | [Simulación: envío email](./02-enviar-email) | [🚀](https://02-enviar-email.netlify.app/) |
-| 03       | [Buscador de autos](./03-buscador-autos)     |                                           |
-|          |                                              |                                           |
-|          |                                              |                                           |
-|          |                                              |                                           |
-|          |                                              |                                           |
+| # Number | Project name                                 | Live site                                   |
+| -------- | -------------------------------------------- | ------------------------------------------- |
+| 01       | [Carrito de compras](./01-carrito)           | [🚀](https://01-carrito.netlify.app/)        |
+| 02       | [Simulación: envío email](./02-enviar-email) | [🚀](https://02-enviar-email.netlify.app/)   |
+| 03       | [Buscador de autos](./03-buscador-autos)     | [🚀](https://03-buscador-autos.netlify.app/) |
+|          |                                              |                                             |
+|          |                                              |                                             |
+|          |                                              |                                             |
+|          |                                              |                                             |
 
 
 
