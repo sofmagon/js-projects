@@ -102,7 +102,7 @@ function filtrarAuto() {
     .filter() iterará sobre el array 'autos', crea un nuevo array basado en el parámetro que es evaluado, en este caso, la función.
 
     Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
-    const resultados = autos.filter(filtrarMarca).filter(filtrarYear);
+    const resultados = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo);
 
     mostrarAutos(resultados);
 }
@@ -122,6 +122,14 @@ function filtrarYear(auto) {
     const { year } = datosBusqueda;
     if (year) {
         return auto.year === year;
+    }
+    return auto;
+}
+
+function filtrarMinimo(auto) {
+    const { minimo } = datosBusqueda;
+    if (minimo) {
+        return auto.precio >= minimo;
     }
     return auto;
 }
