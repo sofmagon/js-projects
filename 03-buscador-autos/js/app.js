@@ -36,6 +36,30 @@ marca.addEventListener('change', e => {
     datosBusqueda.marca = e.target.value;
 });
 
+year.addEventListener('change', e => {
+    datosBusqueda.year = e.target.value;
+});
+
+precioMin.addEventListener('change', e => {
+    datosBusqueda.precioMin = e.target.value;
+});
+
+precioMax.addEventListener('change', e => {
+    datosBusqueda.precioMax = e.target.value;
+});
+
+puertas.addEventListener('change', e => {
+    datosBusqueda.puertas = e.target.value;
+});
+
+transmision.addEventListener('change', e => {
+    datosBusqueda.transmision = e.target.value;
+});
+
+color.addEventListener('change', e => {
+    datosBusqueda.color = e.target.value;
+});
+
 // Mostrando todos los autos y sus características
 function mostrarAutos() {
     autos.forEach(auto => {
