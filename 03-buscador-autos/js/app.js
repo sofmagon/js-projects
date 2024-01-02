@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Event listener para los parámetros de búsqueda
 marca.addEventListener('change', e => {
-    // Leyendo el valor elegido del select
-    console.log(e.target.value);
+    /* Leyendo el valor elegido del select
+    console.log(e.target.value); */
+    datosBusqueda.marca = e.target.value;
 });
 
 // Mostrando todos los autos y sus características
