@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
             spinner.classList.remove('flex');
             spinner.classList.add('hidden');
             resetFormulario();
+
+            // Crear alerta favorable al usuario
+            const alertaExito = document.createElement('P');
+            alertaExito.classList.add('bg-green-500', 'text-white', 'p-2', 'text-center', 'rounded-lg', 'mt-10', 'font-bold', 'text-sm', 'uppercase');
+            alertaExito.textContent = 'Mensaje enviado correctamente';
+            formulario.appendChild(alertaExito);
         }, 3000);
     }
 
