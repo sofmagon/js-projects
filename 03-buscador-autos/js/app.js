@@ -85,5 +85,10 @@ function llenarSelect() {
 
 // Filtrado de resultado con base a la búsqueda
 function filtrarAuto() {
+    // Empleando higher order function: una función que toma otra función
+    const resultados = autos.filter(filtrarMarca);
+}
+
+function filtrarMarca() {
 
 }
