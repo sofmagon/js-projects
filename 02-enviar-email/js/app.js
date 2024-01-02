@@ -9,15 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
     const spinner = document.querySelector('#spinner');
-    const concopia = document.querySelector('#cc-email');
-
-    // Objeto: mensaje a enviar
-    const email = {
-        email: '',
-        email_copia: '',
-        asunto: '',
-        mensaje: ''
-    }
 
     // Eventos
     inputEmail.addEventListener('input', validar);
@@ -28,9 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
         resetFormulario();
     });
     formulario.addEventListener('submit', enviarEmail);
-    concopia.addEventListener('input', function (e) {
 
-    });
+    // Objeto: campos del correo electrónico
+    const email = {
+        email: '',
+        asunto: '',
+        mensaje: ''
+    }
 
     function enviarEmail(e) {
         e.preventDefault();
