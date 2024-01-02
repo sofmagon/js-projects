@@ -28,5 +28,10 @@ function mostrarAutos() {
 
 // Generando los años del select
 function llenarSelect() {
-
+    for (let i = max; i >= min; i--) {
+        const opcion = document.createElement('OPTION');
+        opcion.value = i;
+        opcion.textContent = i;
+        year.appendChild(opcion);
+    }
 }
