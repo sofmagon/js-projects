@@ -87,8 +87,16 @@ function llenarSelect() {
 function filtrarAuto() {
     // Empleando higher order function: una función que toma otra función
     const resultados = autos.filter(filtrarMarca);
+    console.log(resultados);
 }
 
-function filtrarMarca() {
-
+function filtrarMarca(auto) {
+    // Destructuring
+    const { marca } = datosBusqueda;
+    if (marca) {
+        // Retornar todos los autos de la marca que seleccionó el usuario. Selección almacenada en el objeto 'datosBusqueda'
+        return auto.marca === marca;
+    }
+    // Si el usuario no seleccionó nada en específico, mostrar todos
+    return auto;
 }
