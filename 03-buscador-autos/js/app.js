@@ -39,6 +39,7 @@ marca.addEventListener('change', e => {
 
 year.addEventListener('change', e => {
     datosBusqueda.year = e.target.value;
+    filtrarAuto();
 });
 
 precioMin.addEventListener('change', e => {
@@ -83,7 +84,7 @@ function llenarSelect() {
     }
 }
 
-// Filtrado de resultado con base a la búsqueda
+//! Filtrado de resultado con base a la búsqueda
 function filtrarAuto() {
     /* Empleando higher order function: una función que toma otra función; y chaining: encadenamiento.
 
