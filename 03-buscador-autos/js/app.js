@@ -106,7 +106,7 @@ function filtrarMarca(auto) {
     return auto;
 }
 
-function filtrarYear() {
+function filtrarYear(auto) {
     const { year } = datosBusqueda;
     if (year) {
         return auto.year === year;
