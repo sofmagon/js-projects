@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnSubmit = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
     const spinner = document.querySelector('#spinner');
+    const concopia = document.querySelector('cc-email');
 
     // Eventos
     inputEmail.addEventListener('input', validar);
