@@ -85,9 +85,11 @@ function llenarSelect() {
 
 // Filtrado de resultado con base a la búsqueda
 function filtrarAuto() {
-    // Empleando higher order function: una función que toma otra función; y chaining: encadenamiento.
+    /* Empleando higher order function: una función que toma otra función; y chaining: encadenamiento.
 
-    // .filter() iterará sobre el array 'autos', crea un nuevo array basado en el parámetro que es evaluado, en este caso, la función.
+    .filter() iterará sobre el array 'autos', crea un nuevo array basado en el parámetro que es evaluado, en este caso, la función.
+
+    Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
     const resultados = autos.filter(filtrarMarca).filter(filtrarYear);
     console.log(resultados);
 }
