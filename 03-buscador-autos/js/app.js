@@ -25,7 +25,7 @@ const datosBusqueda = {
 
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarAutos();
+    mostrarAutos(autos);
     llenarSelect();
 });
 
@@ -63,8 +63,8 @@ color.addEventListener('change', e => {
     datosBusqueda.color = e.target.value;
 });
 
-// Mostrando todos los autos y sus características
-function mostrarAutos() {
+// Refresco de los resultados en el HTML
+function mostrarAutos(autos) {
     autos.forEach(auto => {
         const autoHTML = document.createElement('P');
         // Destructuring
@@ -93,7 +93,8 @@ function filtrarAuto() {
 
     Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
     const resultados = autos.filter(filtrarMarca).filter(filtrarYear);
-    console.log(resultados);
+    // console.log(resultados);
+    mostrarAutos(resultados);
 }
 
 function filtrarMarca(auto) {
@@ -109,10 +110,8 @@ function filtrarMarca(auto) {
 
 function filtrarYear(auto) {
     const { year } = datosBusqueda;
-
     if (year) {
         return auto.year === year;
     }
-
     return auto;
 }
