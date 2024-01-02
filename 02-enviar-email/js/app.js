@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
             alertaExito.classList.add('bg-green-500', 'text-white', 'p-2', 'text-center', 'rounded-lg', 'mt-10', 'font-bold', 'text-sm', 'uppercase');
             alertaExito.textContent = 'Mensaje enviado correctamente';
             formulario.appendChild(alertaExito);
+
+            // Ocultar la alerta después de 3ms
+            setTimeout(() => {
+                alertaExito.remove();
+            }, 3000);
         }, 3000);
     }
 
