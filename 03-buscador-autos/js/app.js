@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     llenarSelect();
 });
 
+// Event listener para los parámetros de búsqueda
+marca.addEventListener('change', e => {
+    // Leyendo el valor elegido del select
+    console.log(e.target.value);
+});
+
 // Mostrando todos los autos y sus características
 function mostrarAutos() {
     autos.forEach(auto => {
