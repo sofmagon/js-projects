@@ -65,6 +65,8 @@ color.addEventListener('change', e => {
 
 // Refresco de los resultados en el HTML
 function mostrarAutos(autos) {
+    limpiarHTML();
+
     autos.forEach(auto => {
         const autoHTML = document.createElement('P');
         // Destructuring
