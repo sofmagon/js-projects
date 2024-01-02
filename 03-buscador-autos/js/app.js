@@ -60,6 +60,7 @@ puertas.addEventListener('change', e => {
 
 transmision.addEventListener('change', e => {
     datosBusqueda.transmision = e.target.value;
+    filtrarAuto();
 });
 
 color.addEventListener('change', e => {
@@ -104,7 +105,7 @@ function filtrarAuto() {
     .filter() iterará sobre el array 'autos', crea un nuevo array basado en el parámetro que es evaluado, en este caso, la función.
 
     Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
-    const resultados = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas);
+    const resultados = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTransmision);
 
     mostrarAutos(resultados);
 }
@@ -148,6 +149,14 @@ function filtrarPuertas(auto) {
     const { puertas } = datosBusqueda;
     if (puertas) {
         return auto.puertas === puertas;
+    }
+    return auto;
+}
+
+function filtrarTransmision(auto) {
+    const { transmision } = datosBusqueda;
+    if (transmision) {
+        return auto.transmision === transmision;
     }
     return auto;
 }
