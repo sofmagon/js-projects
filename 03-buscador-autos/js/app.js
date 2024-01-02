@@ -104,3 +104,12 @@ function filtrarMarca(auto) {
     // Si el usuario no seleccionó nada en específico, mostrar todos
     return auto;
 }
+
+function filtrarYear() {
+    const { year } = datosBusqueda;
+    if (year) {
+        return auto.year === year;
+    }
+
+    return auto;
+}
