@@ -13,8 +13,8 @@ function mostrarAutos() {
     autos.forEach(auto => {
         const autoHTML = document.createElement('P');
         // Destructuring
-        const { marca, modelo } = auto;
-        autoHTML.textContent = `${marca} ${modelo}`;
+        const { marca, modelo, year, puertas, transmision, precio, color } = auto;
+        autoHTML.textContent = `${marca} ${modelo} - ${year} - ${puertas} puertas - Transmisión: ${transmision} - $ ${precio} MXN - Color: ${color}`;
         // Insertar en HTML
         resultado.appendChild(autoHTML);
     });
