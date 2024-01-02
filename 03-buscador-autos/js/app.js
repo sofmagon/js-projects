@@ -6,13 +6,22 @@ const year = document.querySelector('#year');
 const max = new Date().getFullYear();
 const min = max - 10;
 
+// Objeto con los parámetros de búsqueda
+const datosBusqueda = {
+    marca: '',
+    year: '',
+    precioMin: '',
+    precioMax: '',
+    puertas: '',
+    transmision: '',
+    color: '',
+}
+
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
     mostrarAutos();
     llenarSelect();
 });
-
-// Funciones
 
 // Mostrando todos los autos y sus características
 function mostrarAutos() {
