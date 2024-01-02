@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         spinner.classList.add('flex');
         spinner.classList.remove('hidden');
+
+        // Ocultar el spinner después de 3ms
+        setTimeout(() => {
+            spinner.classList.remove('flex');
+            spinner.classList.add('hidden');
+        }, 3000);
     }
 
     // Objeto: mensaje a enviar
