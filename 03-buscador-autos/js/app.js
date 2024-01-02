@@ -6,8 +6,8 @@ const marca = document.querySelector('#marca');
 const year = document.querySelector('#year');
 const max = new Date().getFullYear();
 const min = max - 10;
-const precioMin = document.querySelector('#minimo');
-const precioMax = document.querySelector('#maximo');
+const minimo = document.querySelector('#minimo');
+const maximo = document.querySelector('#maximo');
 const puertas = document.querySelector('#puertas');
 const transmision = document.querySelector('#transmision');
 const color = document.querySelector('#color');
@@ -16,8 +16,8 @@ const color = document.querySelector('#color');
 const datosBusqueda = {
     marca: '',
     year: '',
-    precioMin: '',
-    precioMax: '',
+    minimo: '',
+    maximo: '',
     puertas: '',
     transmision: '',
     color: '',
@@ -43,12 +43,13 @@ year.addEventListener('change', e => {
     filtrarAuto();
 });
 
-precioMin.addEventListener('change', e => {
-    datosBusqueda.precioMin = e.target.value;
+minimo.addEventListener('change', e => {
+    datosBusqueda.minimo = e.target.value;
+    filtrarAuto();
 });
 
-precioMax.addEventListener('change', e => {
-    datosBusqueda.precioMax = e.target.value;
+maximo.addEventListener('change', e => {
+    datosBusqueda.maximo = e.target.value;
 });
 
 puertas.addEventListener('change', e => {
@@ -102,7 +103,7 @@ function filtrarAuto() {
 
     Como el parámetro ya está ocupado por una función, el parámetro pasará a esa nueva función y automáticamente .filter() iterará sobre el array 'autos'. */
     const resultados = autos.filter(filtrarMarca).filter(filtrarYear);
-    // console.log(resultados);
+
     mostrarAutos(resultados);
 }
 
