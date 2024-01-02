@@ -6,9 +6,12 @@ const resultado = document.querySelector('#resultado');
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
     mostrarAutos();
+    llenarSelect();
 });
 
 // Funciones
+
+// Mostrando todos los autos y sus características
 function mostrarAutos() {
     autos.forEach(auto => {
         const autoHTML = document.createElement('P');
@@ -18,4 +21,9 @@ function mostrarAutos() {
         // Insertar en HTML
         resultado.appendChild(autoHTML);
     });
+}
+
+// Generando los años del select
+function llenarSelect() {
+
 }
