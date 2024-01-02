@@ -34,6 +34,7 @@ marca.addEventListener('change', e => {
     /* Leyendo el valor elegido del select
     console.log(e.target.value); */
     datosBusqueda.marca = e.target.value;
+    filtrarAuto();
 });
 
 year.addEventListener('change', e => {
@@ -80,4 +81,9 @@ function llenarSelect() {
         opcion.textContent = i;
         year.appendChild(opcion);
     }
+}
+
+// Filtrado de resultado con base a la búsqueda
+function filtrarAuto() {
+
 }
