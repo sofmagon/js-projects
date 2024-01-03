@@ -31,6 +31,8 @@ function agregarTweet(e) {
     tweets = [...tweets, tweetObj];
     // Una vez agregado, crear HTML
     crearHTML();
+    // Reiniciar el formulario
+    formulario.reset();
 }
 
 // Mostrar mensaje de error
@@ -63,7 +65,7 @@ function crearHTML() {
     }
 }
 
-// Limpiar HTML
+// Limpiar HTML previo
 function limpiarHTML() {
     while (listaTweets.firstChild) {
         listaTweets.removeChild(listaTweets.firstChild);
