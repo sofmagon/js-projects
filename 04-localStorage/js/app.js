@@ -10,8 +10,8 @@ function eventListeners() {
     formulario.addEventListener('submit', agregarTweet);
     // Cuando el documento está listo
     document.addEventListener('DOMContentLoaded', () => {
-        // Recuperando los tweets de localStorage para mostrarlos en el HTML
-        tweets = JSON.parse(localStorage.getItem('tweets'));
+        // Recuperando los tweets de localStorage para mostrarlos en el HTML, el OR es para evitar fallos por si 'tweets' está vacío
+        tweets = JSON.parse(localStorage.getItem('tweets')) || [];
         console.log(tweets);
         crearHTML();
     });
