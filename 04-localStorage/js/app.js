@@ -22,6 +22,9 @@ function agregarTweet(e) {
         // evita que se ejecuten más líneas, aplica dentro de un if de una función
         return;
     }
+    // Agregar mensaje al array
+    tweets = [...tweets, tweet];
+    console.log(tweets);
 }
 
 // Mostrar mensaje de error
