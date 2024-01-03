@@ -64,10 +64,15 @@ function crearHTML() {
 
     if (tweets.length > 0) {
         tweets.forEach(tweet => {
-            // Crear HTML
+            // Crear HTML de los tweets
             const li = document.createElement('LI');
             li.textContent = tweet.texto;
             listaTweets.appendChild(li);
+            // Agregar botón para eliminar
+            const btnEliminar = document.createElement('A');
+            btnEliminar.classList.add('borrar-tweet');
+            btnEliminar.textContent = 'X';
+            li.appendChild(btnEliminar);
         });
     }
 
