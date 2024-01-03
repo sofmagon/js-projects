@@ -13,6 +13,7 @@ function eventListeners() {
         // Recuperando los tweets de localStorage para mostrarlos en el HTML
         tweets = JSON.parse(localStorage.getItem('tweets'));
         console.log(tweets);
+        crearHTML();
     });
 }
 
