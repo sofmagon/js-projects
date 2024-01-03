@@ -29,7 +29,8 @@ function agregarTweet(e) {
     }
     // Agregar mensaje al array con spread operator para preservar el contenido previo
     tweets = [...tweets, tweetObj];
-    console.log(tweets);
+    // Una vez agregado, crear HTML
+    crearHTML();
 }
 
 // Mostrar mensaje de error
@@ -46,4 +47,16 @@ function mostrarError(error) {
     setTimeout(() => {
         mensajeError.remove();
     }, 3000);
+}
+
+// Mostrar listado de los tweets
+function crearHTML() {
+    if (tweets.length > 0) {
+        tweets.forEach(tweet => {
+            // Crear HTML
+            const li = document.createElement('LI');
+            li.textContent = tweet.texto;
+            listaTweets.appendChild(li);
+        });
+    }
 }
