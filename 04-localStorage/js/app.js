@@ -93,7 +93,7 @@ function borrarTweet(id) {
     // .filter() genera un nuevo array, en este caso se asignará al array 'tweets'
     // Iterará sobre el array 'tweets' para preservar los que sean diferentes al que se desea eliminar.
     tweets = tweets.filter(tweet => tweet.id !== id);
-    console.log(tweets);
+    crearHTML();
 }
 
 // Limpiar HTML previo
