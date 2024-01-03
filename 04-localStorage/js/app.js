@@ -73,6 +73,10 @@ function crearHTML() {
             btnEliminar.classList.add('borrar-tweet');
             btnEliminar.textContent = 'X';
             li.appendChild(btnEliminar);
+            // Agregando función de eliminar para dicho botón
+            btnEliminar.onclick = () => {
+                borrarTweet(tweet.id);
+            }
         });
     }
 
@@ -82,6 +86,14 @@ function crearHTML() {
 // Agregando tweets actuales a localStorage
 function sincronizarStorage() {
     localStorage.setItem('tweets', JSON.stringify(tweets));
+}
+
+// Eliminando un tweet
+function borrarTweet(id) {
+    // .filter() genera un nuevo array, en este caso se asignará al array 'tweets'
+    // Iterará sobre el array 'tweets' para preservar los que sean diferentes al que se desea eliminar.
+    tweets = tweets.filter(tweet => tweet.id !== id);
+    console.log(tweets);
 }
 
 // Limpiar HTML previo
