@@ -16,6 +16,12 @@ function cargarEventListener() {
     // Elimina cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
 
+    // Muestra los cursos de localStorage en HTML. El OR es para evitar errores por si el array está vacío.
+    document.addEventListener('DOMContentLoaded', () => {
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carritoHTML();
+    });
+
     // Vaciar el carrito
     vaciarCarritoBtn.addEventListener('click', () => {
         articulosCarrito = [];
