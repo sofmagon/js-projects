@@ -123,6 +123,13 @@ function carritoHTML() {
         // Insertando cada <tr> -> <tbody> a su padre <table>
         contenedorCarrito.appendChild(row);
     });
+
+    // Agregar el carrito al localStorage
+    sincronizarStorage();
+}
+
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 // Elimina cursos del <tbody>
