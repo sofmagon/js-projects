@@ -22,8 +22,13 @@ function agregarTweet(e) {
         // evita que se ejecuten más líneas, aplica dentro de un if de una función
         return;
     }
-    // Agregar mensaje al array
-    tweets = [...tweets, tweet];
+    // Objeto con el texto y un método auxiliar como identificador único
+    const tweetObj = {
+        id: Date.now(),
+        texto: tweet
+    }
+    // Agregar mensaje al array con spread operator para preservar el contenido previo
+    tweets = [...tweets, tweetObj];
     console.log(tweets);
 }
 
