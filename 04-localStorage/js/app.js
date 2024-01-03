@@ -51,6 +51,8 @@ function mostrarError(error) {
 
 // Mostrar listado de los tweets
 function crearHTML() {
+    limpiarHTML();
+
     if (tweets.length > 0) {
         tweets.forEach(tweet => {
             // Crear HTML
@@ -58,5 +60,12 @@ function crearHTML() {
             li.textContent = tweet.texto;
             listaTweets.appendChild(li);
         });
+    }
+}
+
+// Limpiar HTML
+function limpiarHTML() {
+    while (listaTweets.firstChild) {
+        listaTweets.removeChild(listaTweets.firstChild);
     }
 }
