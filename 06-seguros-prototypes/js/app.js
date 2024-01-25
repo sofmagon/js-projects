@@ -86,5 +86,5 @@ function cotizarSeguro(e) {
 
 	// Después de la validación, instanciar el objeto Seguro recibiendo como parámetros las variables ya obtenidas
 	const seguro = new Seguro(marca, year, tipo);
-	console.log(seguro);
+	seguro.cotizarSeguro();
 }
