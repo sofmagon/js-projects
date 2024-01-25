@@ -13,7 +13,26 @@ Seguro.prototype.cotizarSeguro = function () {
 	2.- Asiático 1.05%
 	3.- Europeo 1.35%
 	*/
-	console.log(this.marca);
+	// console.log(this.marca);
+
+	const precioBase = 2000;
+	let precioFinal;
+
+	switch (this.marca) {
+		case '1':
+			precioFinal = precioBase * 1.15;
+			break;
+		case '2':
+			precioFinal = precioBase * 1.05;
+			break;
+		case '3':
+			precioFinal = precioBase * 1.35;
+			break;
+		default:
+			break;
+	}
+
+	console.log(precioFinal);
 }
 
 function UI() { }
