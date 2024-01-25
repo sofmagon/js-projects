@@ -34,3 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Generando los años del select
 	ui.llenarOpciones();
 })
+
+eventListeners();
+function eventListeners() {
+	const formulario = document.querySelector('#cotizar-seguro');
+	formulario.addEventListener('submit', cotizarSeguro);
+}
