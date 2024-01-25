@@ -9,6 +9,8 @@ function Seguro(marca, year, tipo) {
 }
 
 function UI() { }
+// Instanciar UI
+const ui = new UI();
 
 // Proto. Genera los años del select
 UI.prototype.llenarOpciones = () => {
@@ -40,10 +42,6 @@ UI.prototype.mostrarMensaje = (mensaje, tipo) => {
 	const formulario = document.querySelector('#cotizar-seguro');
 	formulario.insertBefore(div, document.querySelector('#resultado'));
 }
-
-// Instanciar UI
-const ui = new UI();
-console.log(ui);
 
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
