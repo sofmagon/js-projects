@@ -1,3 +1,5 @@
+//:: Ejercicio: implementación de Prototypes
+
 // Constructores. Uno para la cotización del seguro y otro para la interfaz de usuario
 
 function Seguro(marca, year, tipo) {
@@ -8,7 +10,7 @@ function Seguro(marca, year, tipo) {
 
 function UI() { }
 
-// Llena las opciones de los años
+// Proto. Genera los años del select
 UI.prototype.llenarOpciones = () => {
 	const max = new Date().getFullYear();
 	const min = max - 20;
@@ -27,7 +29,7 @@ UI.prototype.llenarOpciones = () => {
 const ui = new UI();
 console.log(ui);
 
-// Cuando el documento está listo
+// Eventos
 document.addEventListener('DOMContentLoaded', () => {
 	// Generando los años del select
 	ui.llenarOpciones();
