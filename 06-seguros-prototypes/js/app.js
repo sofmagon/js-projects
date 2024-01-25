@@ -41,6 +41,10 @@ UI.prototype.mostrarMensaje = (mensaje, tipo) => {
 	// Insertar en HTML
 	const formulario = document.querySelector('#cotizar-seguro');
 	formulario.insertBefore(div, document.querySelector('#resultado'));
+	// Ocultar la alerta después de 3ms
+	setTimeout(() => {
+		div.remove();
+	}, 3000);
 }
 
 // Eventos
