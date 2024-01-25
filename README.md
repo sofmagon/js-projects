@@ -17,6 +17,10 @@
 | 03       | [Buscador de autos](./03-buscador-autos)                     | [🚀](https://03-buscador-autos.netlify.app/)       |
 | 04       | [Local Storage](./04-localStorage)                           | [🚀](https://04-localstorage.netlify.app/)         |
 | 05       | [Carrito de compras: Local Storage](./05-carrito-localStorage) | [🚀](https://05-carrito-localstorage.netlify.app/) |
+| 06       | [Cotizador de seguros: Prototypes](./06-seguros-prototypes)  |                                                   |
+|          |                                                              |                                                   |
+|          |                                                              |                                                   |
+|          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 
