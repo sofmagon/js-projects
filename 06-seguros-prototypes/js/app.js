@@ -1,6 +1,4 @@
-//:: Ejercicio: implementación de Prototypes
-
-// Constructores. Uno para la cotización del seguro y otro para la interfaz de usuario
+//:: Ejercicio: implementación de Prototypes sobre dos objetos. Uno para la cotización del seguro y otro para la UI.
 
 function Seguro(marca, year, tipo) {
 	this.marca = marca;
@@ -8,8 +6,18 @@ function Seguro(marca, year, tipo) {
 	this.tipo = tipo;
 }
 
+// Proto. Realiza la cotización del seguro con los datos
+Seguro.prototype.cotizarSeguro = function () {
+	/* Incrementos al valor del auto con base a su tipo
+	1.- Americano 1.15%
+	2.- Asiático 1.05%
+	3.- Europeo 1.35%
+	*/
+	console.log(this.marca);
+}
+
 function UI() { }
-// Instanciar UI
+// Instanciar UI de manera global
 const ui = new UI();
 
 // Proto. Genera los años del select
