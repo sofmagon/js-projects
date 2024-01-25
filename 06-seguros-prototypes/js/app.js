@@ -22,3 +22,13 @@ UI.prototype.llenarOpciones = () => {
 		selectYear.appendChild(option);
 	}
 }
+
+// Instanciar UI
+const ui = new UI();
+console.log(ui);
+
+// Cuando el documento está listo
+document.addEventListener('DOMContentLoaded', () => {
+	// Generando los años del select
+	ui.llenarOpciones();
+})
