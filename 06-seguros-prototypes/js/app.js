@@ -32,6 +32,10 @@ Seguro.prototype.cotizarSeguro = function () {
 			break;
 	}
 
+	// Por cada año que el año seleccionado sea más viejo que el actual, el precio final se reducirá un 3%
+	const diferencia = new Date().getFullYear() - this.year;
+	precioFinal -= ((diferencia * 3) * precioFinal) / 100;
+
 	console.log(precioFinal);
 }
 
