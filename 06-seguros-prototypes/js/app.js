@@ -74,5 +74,9 @@ function cotizarSeguro(e) {
 		return;
 	}
 
-	console.log('...cotizando');
+	ui.mostrarMensaje('Cotizando. Espera un momento', 'exito');
+
+	// Después de la validación, instanciar el objeto Seguro recibiendo como parámetros las variables ya obtenidas
+	const seguro = new Seguro(marca, year, tipo);
+	console.log(seguro);
 }
