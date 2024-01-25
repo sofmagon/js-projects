@@ -66,7 +66,7 @@ function cotizarSeguro(e) {
 	const tipo = document.querySelector('input[name="tipo"]:checked').value;
 
 	if (marca === '' || year === '' || tipo === '') {
-
+		ui.mostrarMensaje('Todos los campos son obligatorios', 'error');
 	} else {
 		console.log('...Sí pasó la validación');
 	}
