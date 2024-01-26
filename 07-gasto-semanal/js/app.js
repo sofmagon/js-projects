@@ -3,6 +3,8 @@
 // Variables y Selectores
 const formulario = document.querySelector('#agregar-gasto');
 const gastoListado = document.querySelector('#gastos ul');
+// Esta variable global permitirá la comunicación entre la clase Presupuesto y la función preguntarPresupuesto
+let presupuesto;
 
 // Eventos
 eventListeners();
@@ -33,4 +35,8 @@ function preguntarPresupuesto() {
 	if (presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario <= 0) {
 		window.location.reload();
 	}
+
+	// Pasando la validación, instanciar la clase Presupuesto
+	presupuesto = new Presupuesto(presupuestoUsuario);
+	console.log(presupuesto);
 }
