@@ -82,7 +82,7 @@ function agregarGasto(e) {
 	e.preventDefault();
 	// Leer los dos inputs
 	const nombreGasto = document.querySelector('#gasto').value;
-	const cantidadGasto = document.querySelector('#cantidad').value;
+	const cantidadGasto = Number(document.querySelector('#cantidad').value);
 	// Validaciones. return evita que se ejecute código fuera de las condiciones
 	if (nombreGasto === '' || cantidadGasto === '') {
 		ui.imprimirAlerta('Ambos campos son obligatorios', 'error');
@@ -91,5 +91,9 @@ function agregarGasto(e) {
 		return;
 	}
 
-	console.log('Agregando gasto');
+	// console.log('Agregando gasto');
+
+	// Generar un objeto con el gasto. Esta sintaxis es lo contrario al destructing, se conoce como Object Literal Enhancement
+	const gasto = { nombreGasto, cantidadGasto };
+	console.log(gasto);
 }
