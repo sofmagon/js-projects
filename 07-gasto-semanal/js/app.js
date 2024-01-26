@@ -38,8 +38,10 @@ class Presupuesto {
 	}
 
 	eliminarGasto(id) {
-		// Obtener todos los gastos menos el que gasto con el ID seleccionado
+		// Obtener todos los gastos menos el gasto con el ID deseado
 		this.gastos = this.gastos.filter(gasto => gasto.id !== id);
+		// Llamar al método para volver a calcular
+		this.calcularRestante();
 	}
 }
 
@@ -199,5 +201,9 @@ function agregarGasto(e) {
 }
 
 function eliminarGasto(id) {
+	// Elimina gastos del objeto Presupuesto
 	presupuesto.eliminarGasto(id);
+	// Elimina gastos del HTML
+	const { gastos } = presupuesto;
+	ui.mostrarGastos(gastos);
 }
