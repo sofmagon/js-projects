@@ -92,7 +92,11 @@ class UI {
 			// Botón para eliminar el gasto
 			const btnBorrar = document.createElement('BUTTON');
 			btnBorrar.classList.add('btn', 'btn-danger', 'borrar-gasto');
-			btnBorrar.textContent = 'Borrar'
+			btnBorrar.textContent = 'Borrar';
+			btnBorrar.onclick = () => {
+				// haciendo referencia al destructuring del objeto gasto
+				eliminarGasto(id);
+			}
 			nuevoGasto.appendChild(btnBorrar);
 
 			// Insertar todos los gastos en HTML
@@ -187,4 +191,8 @@ function agregarGasto(e) {
 	ui.comprobarPresupuesto(presupuesto);
 	// Limpiar formulario una vez agregado el gasto
 	formulario.reset();
+}
+
+function eliminarGasto(e) {
+
 }
