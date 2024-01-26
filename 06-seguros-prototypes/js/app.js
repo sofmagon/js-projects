@@ -9,9 +9,9 @@ function Seguro(marca, year, tipo) {
 // Proto. Realiza la cotización del seguro con los datos
 Seguro.prototype.cotizarSeguro = function () {
 	/* Incrementos al valor del auto con base a su tipo
-	1.- Americano 1.15%
-	2.- Asiático 1.05%
-	3.- Europeo 1.35%
+	1.- Americano 15%
+	2.- Asiático 05%
+	3.- Europeo 35%
 	*/
 	// console.log(this.marca);
 
@@ -36,6 +36,11 @@ Seguro.prototype.cotizarSeguro = function () {
 	// Descuento del 3% por cada año que el año seleccionado sea más viejo que el actual
 	const diferencia = new Date().getFullYear() - this.year;
 	precioFinal -= ((diferencia * 3) * precioFinal) / 100;
+
+	/* Calcular el precio final con base en el tipo de seguro.
+	1.- Básico: se multiplica por un 30% más.
+	2.- Completo: se multiplica por un 50% más.
+	*/
 
 	console.log(precioFinal);
 }
