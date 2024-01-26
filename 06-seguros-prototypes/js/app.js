@@ -99,13 +99,13 @@ UI.prototype.mostrarResultado = (total, seguro) => {
 	// Marca contiene un número, convertirlo a palabra para el usuario.
 	let textoMarca;
 	switch (marca) {
-		case 1:
+		case '1':
 			textoMarca = 'Americano';
 			break;
-		case 2:
+		case '2':
 			textoMarca = 'Asiático';
 			break;
-		case 3:
+		case '3':
 			textoMarca = 'Europeo';
 			break;
 		default:
@@ -117,6 +117,8 @@ UI.prototype.mostrarResultado = (total, seguro) => {
 	div.innerHTML = `
 		<p class="header">Tu Resumen</p>
 		<p class="font-bold">Marca: <span class="font-normal">${textoMarca}</span></p>
+		<p class="font-bold">Año: <span class="font-normal">${year}</span></p>
+		<p class="font-bold">Tipo seguro: <span class="font-normal">${tipo}</span></p>
 		<p class="font-bold">Total: <span class="font-normal">$${total} MXN</span></p>
 	`;
 
