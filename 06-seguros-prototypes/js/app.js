@@ -42,7 +42,15 @@ Seguro.prototype.cotizarSeguro = function () {
 	2.- Completo: se multiplica por un 50% más.
 	*/
 
-	console.log(precioFinal);
+	if (this.tipo === 'basico') {
+		precioFinal *= 1.30;
+	} else {
+		precioFinal *= 1.50;
+	}
+
+	// console.log(precioFinal);
+
+	return precioFinal;
 }
 
 function UI() { }
