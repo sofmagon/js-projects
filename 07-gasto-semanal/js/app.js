@@ -36,6 +36,11 @@ class Presupuesto {
 
 		// .- para sacar el restante de este ámbito, hay que agregarla al destructuring del objeto presupuesto en la función agregarGasto.
 	}
+
+	eliminarGasto(id) {
+		// Obtener todos los gastos menos el que gasto con el ID seleccionado
+		this.gastos = this.gastos.filter(gasto => gasto.id !== id);
+	}
 }
 
 class UI {
@@ -193,6 +198,6 @@ function agregarGasto(e) {
 	formulario.reset();
 }
 
-function eliminarGasto(e) {
-
+function eliminarGasto(id) {
+	presupuesto.eliminarGasto(id);
 }
