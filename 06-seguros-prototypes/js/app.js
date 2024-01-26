@@ -94,11 +94,13 @@ UI.prototype.mostrarMensaje = (mensaje, tipo) => {
 
 // Proto. Mostrar el detalle del seguro cotizado y la cantidad total
 UI.prototype.mostrarResultado = (total, seguro) => {
+
 	const div = document.createElement('DIV');
 	div.classList.add('mt-10');
 	div.innerHTML = `
 		<p class="header">Tu Resumen</p>
-		<p class="font-bold">Total: ${total}</p>
+		<p class="font-bold">Marca: <span class="font-normal"></span></p>
+		<p class="font-bold">Total: <span class="font-normal">$${total} MXN</span></p>
 	`;
 
 	// Colocándolo en el HTML
