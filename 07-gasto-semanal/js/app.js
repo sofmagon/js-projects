@@ -23,11 +23,8 @@ class Presupuesto {
 	}
 
 	nuevoGasto(gasto) {
-		// console.log(gasto);
-
 		// Hacer una copia del array como esté y agregando el nuevo gasto
 		this.gastos = [...this.gastos, gasto];
-		console.log(this.gastos);
 	}
 }
 
@@ -61,6 +58,33 @@ class UI {
 		setTimeout(() => {
 			divAlerta.remove();
 		}, 3000);
+	}
+
+	// .- Método que toma como referencia el destructuring del objeto presupuesto
+	agregarGastoListado(gastos) {
+		// Iterando sobre gastos (es un array de objetos)
+		gastos.forEach(gasto => {
+			// Destructuring el objeto gasto
+			const { cantidadGasto, nombreGasto, id } = gasto;
+
+			// Crear lista HTML
+			const nuevoGasto = document.createElement('LI');
+			nuevoGasto.className = 'list-group-item d-flex justify-content-between align-items-center';
+			// Incrustando el ID en un atributo personalizado
+			nuevoGasto.dataset.id = id;
+
+			// HTML del gasto
+			nuevoGasto.innerHTML = `${nombreGasto} <span class="badge badge-primary badge-pill"> ${cantidadGasto} </span>`;
+
+			// Botón para eliminar el gasto
+			const btnBorrar = document.createElement('BUTTON');
+			btnBorrar.classList.add('btn', 'btn-danger', 'borrar-gasto');
+			btnBorrar.textContent = 'Borrar'
+			nuevoGasto.appendChild(btnBorrar);
+
+			// Insertar todos los gastos en HTML
+			gastoListado.appendChild(nuevoGasto);
+		});
 	}
 }
 
@@ -111,6 +135,9 @@ function agregarGasto(e) {
 	presupuesto.nuevoGasto(gasto);
 	// Imprimir alerta; sin tipo, lo hace exitosa
 	ui.imprimirAlerta('Gasto agregado correctamente');
+	// Imprimir gasto aplicando destructuring al objeto presupuesto
+	const { gastos } = presupuesto;
+	ui.agregarGastoListado(gastos);
 	// Limpiar formulario una vez agregado el gasto
 	formulario.reset();
 }
