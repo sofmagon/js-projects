@@ -16,6 +16,9 @@ function eventListeners() {
 class Presupuesto {
 	constructor(presupuesto) {
 		this.presupuesto = Number(presupuesto);
+		// Cuando se instancia esta clase, el presupuesto asignado es el mismo restante. Ya que no se han generado gastos.
+		this.restante = Number(presupuesto);
+		this.gastos = [];
 	}
 }
 
