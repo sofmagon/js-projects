@@ -23,8 +23,17 @@ class Presupuesto {
 }
 
 class UI {
-
+	// La función recibe el objeto presupuesto
+	insertarPresupuesto(cantidad) {
+		// Destructuring del objeto presupuesto
+		const { presupuesto, restante } = cantidad;
+		// Mostrando en el HTML
+		document.querySelector('#total').textContent = presupuesto;
+		document.querySelector('#restante').textContent = restante;
+	}
 }
+
+const ui = new UI();
 
 // Funciones
 function preguntarPresupuesto() {
@@ -41,5 +50,7 @@ function preguntarPresupuesto() {
 
 	// Pasando la validación, instanciar la clase Presupuesto
 	presupuesto = new Presupuesto(presupuestoUsuario);
-	console.log(presupuesto);
+
+	// Insertar presupuesto y restante en el HTML
+	ui.insertarPresupuesto(presupuesto);
 }
