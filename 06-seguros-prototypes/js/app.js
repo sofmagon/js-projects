@@ -103,7 +103,6 @@ UI.prototype.mostrarResultado = (total, seguro) => {
 
 	// Colocándolo en el HTML
 	const resultadoDiv = document.querySelector('#resultado');
-	resultadoDiv.appendChild(div);
 
 	// Mostrar el spinner
 	const spinner = document.querySelector('#cargando');
@@ -111,6 +110,8 @@ UI.prototype.mostrarResultado = (total, seguro) => {
 	// Ocultar el spinner al mismo tiempo que el mensaje
 	setTimeout(() => {
 		spinner.remove();
+		// Mostrar el resultado una vez eliminado el spinner
+		resultadoDiv.appendChild(div);
 	}, 3000);
 }
 
