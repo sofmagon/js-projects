@@ -21,6 +21,10 @@ class Presupuesto {
 		this.restante = Number(presupuesto);
 		this.gastos = [];
 	}
+
+	nuevoGasto(gasto) {
+		console.log(gasto);
+	}
 }
 
 class UI {
@@ -98,5 +102,9 @@ function agregarGasto(e) {
 	- Date.now() obtiene los ms transcurridos desde Enero 01, 1970 hasta la fecha, lo cual es un buen método para generar ID únicos.
 	*/
 	const gasto = { nombreGasto, cantidadGasto, id: Date.now() };
-	console.log(gasto);
+
+	// Agrega un nuevo gasto recibiendo el nuevo objeto
+	presupuesto.nuevoGasto(gasto);
+
+	// console.log(gasto);
 }
