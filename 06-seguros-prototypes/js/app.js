@@ -118,7 +118,7 @@ UI.prototype.mostrarResultado = (total, seguro) => {
 		<p class="header">Tu Resumen</p>
 		<p class="font-bold">Marca: <span class="font-normal">${textoMarca}</span></p>
 		<p class="font-bold">Año: <span class="font-normal">${year}</span></p>
-		<p class="font-bold">Tipo seguro: <span class="font-normal">${tipo}</span></p>
+		<p class="font-bold">Tipo seguro: <span class="font-normal capitalize">${tipo}</span></p>
 		<p class="font-bold">Total: <span class="font-normal">$${total} MXN</span></p>
 	`;
 
