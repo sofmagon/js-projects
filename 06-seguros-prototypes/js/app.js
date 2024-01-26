@@ -109,7 +109,7 @@ UI.prototype.mostrarResultado = (total, seguro) => {
 	spinner.style.display = 'block';
 	// Ocultar el spinner al mismo tiempo que el mensaje
 	setTimeout(() => {
-		spinner.remove();
+		spinner.style.display = 'none';
 		// Mostrar el resultado una vez eliminado el spinner
 		resultadoDiv.appendChild(div);
 	}, 3000);
