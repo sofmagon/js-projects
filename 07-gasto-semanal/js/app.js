@@ -77,7 +77,7 @@ class UI {
 			nuevoGasto.dataset.id = id;
 
 			// HTML del gasto
-			nuevoGasto.innerHTML = `${nombreGasto} <span class="badge badge-primary badge-pill"> ${cantidadGasto} </span>`;
+			nuevoGasto.innerHTML = `${nombreGasto} <span class="badge badge-primary badge-pill"> $ ${cantidadGasto} </span>`;
 
 			// Botón para eliminar el gasto
 			const btnBorrar = document.createElement('BUTTON');
