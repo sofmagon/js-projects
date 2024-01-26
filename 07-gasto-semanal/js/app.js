@@ -109,4 +109,6 @@ function agregarGasto(e) {
 
 	// Agrega un nuevo gasto recibiendo el nuevo objeto
 	presupuesto.nuevoGasto(gasto);
+	// Imprimir alerta; sin tipo, lo hace exitosa
+	ui.imprimirAlerta('Gasto agregado correctamente');
 }
