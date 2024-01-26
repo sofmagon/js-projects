@@ -62,6 +62,9 @@ class UI {
 
 	// .- Método que toma como referencia el destructuring del objeto presupuesto
 	agregarGastoListado(gastos) {
+		// Primero eliminar cualquier gasto agregado, para evitar duplicados. El uso de this es porque convive en la misma clase.
+		this.limpiarHTML();
+
 		// Iterando sobre gastos (es un array de objetos)
 		gastos.forEach(gasto => {
 			// Destructuring el objeto gasto
