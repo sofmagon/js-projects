@@ -14,3 +14,15 @@ function eventListeners() {
 
 
 // Funciones
+function preguntarPresupuesto() {
+	const presupuestoUsuario = prompt('¿Cuál es tu presupuesto?');
+	/* Validaciones:
+	.- Si el usuario sólo acepta
+	.- o cancela la ventana
+	.- o ingresa un NaN
+	.- o ingresa un presupuesto 0 o negativo: recargar la página
+	*/
+	if (presupuestoUsuario === '' || presupuestoUsuario === null || isNaN(presupuestoUsuario) || presupuestoUsuario <= 0) {
+		window.location.reload();
+	}
+}
