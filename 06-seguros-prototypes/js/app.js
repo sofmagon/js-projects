@@ -94,12 +94,29 @@ UI.prototype.mostrarMensaje = (mensaje, tipo) => {
 
 // Proto. Mostrar el detalle del seguro cotizado y la cantidad total
 UI.prototype.mostrarResultado = (total, seguro) => {
+	// Destructuring del objeto Seguro
+	const { marca, year, tipo } = seguro;
+	// Marca contiene un número, convertirlo a palabra para el usuario.
+	let textoMarca;
+	switch (marca) {
+		case 1:
+			textoMarca = 'Americano';
+			break;
+		case 2:
+			textoMarca = 'Asiático';
+			break;
+		case 3:
+			textoMarca = 'Europeo';
+			break;
+		default:
+			break;
+	}
 
 	const div = document.createElement('DIV');
 	div.classList.add('mt-10');
 	div.innerHTML = `
 		<p class="header">Tu Resumen</p>
-		<p class="font-bold">Marca: <span class="font-normal"></span></p>
+		<p class="font-bold">Marca: <span class="font-normal">${textoMarca}</span></p>
 		<p class="font-bold">Total: <span class="font-normal">$${total} MXN</span></p>
 	`;
 
