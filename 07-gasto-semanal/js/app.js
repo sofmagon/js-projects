@@ -11,7 +11,15 @@ function eventListeners() {
 }
 
 // Clases
+class Presupuesto {
+	constructor(presupuesto) {
+		this.presupuesto = Number(presupuesto);
+	}
+}
 
+class UI {
+
+}
 
 // Funciones
 function preguntarPresupuesto() {
