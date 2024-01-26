@@ -144,6 +144,12 @@ function cotizarSeguro(e) {
 
 	ui.mostrarMensaje('Cotizando. Espera un momento', 'exito');
 
+	// Ocultar las cotizaciones previas
+	const resultados = document.querySelector('#resultado div');
+	if (resultados != null) {
+		resultados.remove();
+	}
+
 	// Después de la validación, instanciar el objeto Seguro recibiendo como parámetros las variables ya obtenidas
 	const seguro = new Seguro(marca, year, tipo);
 	const total = seguro.cotizarSeguro();
