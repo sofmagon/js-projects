@@ -1,4 +1,4 @@
-//:: Ejercicio: manejo de un presupuesto poniendo en práctica las clases en JavaScript
+//:: Ejercicio: manejo de un presupuesto poniendo en práctica las clases. Una encargada de los cálculos y la otra de la UI.
 
 // Variables y Selectores
 const formulario = document.querySelector('#agregar-gasto');
