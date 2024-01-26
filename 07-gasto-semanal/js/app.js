@@ -204,6 +204,10 @@ function eliminarGasto(id) {
 	// Elimina gastos del objeto Presupuesto
 	presupuesto.eliminarGasto(id);
 	// Elimina gastos del HTML
-	const { gastos } = presupuesto;
+	const { gastos, restante } = presupuesto;
 	ui.mostrarGastos(gastos);
+	// Actualizar dinero restante
+	ui.actualizarRestante(restante);
+	// Verificando todo el presupuesto para cambiar color del restante
+	ui.comprobarPresupuesto(presupuesto);
 }
