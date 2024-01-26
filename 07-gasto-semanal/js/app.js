@@ -10,6 +10,7 @@ let presupuesto;
 eventListeners();
 function eventListeners() {
 	document.addEventListener('DOMContentLoaded', preguntarPresupuesto);
+	formulario.addEventListener('submit', agregarGasto);
 }
 
 // Clases
