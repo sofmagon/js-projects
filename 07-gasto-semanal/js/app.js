@@ -134,6 +134,10 @@ class UI {
 			// Más del 50% gastado
 			restanteDiv.classList.remove('alert-success');
 			restanteDiv.classList.add('alert-warning');
+		} else {
+			// Si el usuario elimina gasto, volver el presupuesto a verde en cualquiera de los dos escenarios rojo o amarillo
+			restanteDiv.classList.remove('alert-danger', 'alert-warning');
+			restanteDiv.classList.add('alert-success');
 		}
 
 		// Si presupuesta es 0 o menor, inhabiltar el botón para agregar
