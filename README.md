@@ -18,7 +18,7 @@
 | 04       | [Local Storage](./04-localStorage)                           | [🚀](https://04-localstorage.netlify.app/)         |
 | 05       | [Carrito de compras: Local Storage](./05-carrito-localStorage) | [🚀](https://05-carrito-localstorage.netlify.app/) |
 | 06       | [Cotizador de seguros: Prototypes](./06-seguros-prototypes)  | [🚀](https://06-cotizador-prototypes.netlify.app/) |
-| 07       | [Gasto semanal](./07-gasto-semanal)                          |                                                   |
+| 07       | [Gasto semanal](./07-gasto-semanal)                          | [🚀](https://07-gasto-semanal.netlify.app/)        |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
