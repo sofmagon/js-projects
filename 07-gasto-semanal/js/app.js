@@ -133,8 +133,6 @@ function agregarGasto(e) {
 		return;
 	}
 
-	// console.log('Agregando gasto');
-
 	/*
 	Generar un objeto con el gasto. Esta sintaxis es lo contrario al destructing, se conoce como Object Literal Enhancement.
 	- Date.now() obtiene los ms transcurridos desde Enero 01, 1970 hasta la fecha, lo cual es un buen método para generar ID únicos.
@@ -143,11 +141,11 @@ function agregarGasto(e) {
 
 	// Agrega un nuevo gasto recibiendo el nuevo objeto
 	presupuesto.nuevoGasto(gasto);
-	// Imprimir alerta; sin tipo, lo hace exitosa
-	ui.imprimirAlerta('Gasto agregado correctamente');
 	// Imprimir gasto aplicando destructuring al objeto presupuesto
 	const { gastos } = presupuesto;
 	ui.agregarGastoListado(gastos);
+	// Imprimir alerta; sin tipo, lo hace exitosa
+	ui.imprimirAlerta('Gasto agregado correctamente');
 	// Limpiar formulario una vez agregado el gasto
 	formulario.reset();
 }
