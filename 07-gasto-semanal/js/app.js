@@ -111,4 +111,6 @@ function agregarGasto(e) {
 	presupuesto.nuevoGasto(gasto);
 	// Imprimir alerta; sin tipo, lo hace exitosa
 	ui.imprimirAlerta('Gasto agregado correctamente');
+	// Limpiar formulario una vez agregado el gasto
+	formulario.reset();
 }
