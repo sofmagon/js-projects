@@ -86,6 +86,13 @@ class UI {
 			gastoListado.appendChild(nuevoGasto);
 		});
 	}
+
+	limpiarHTML() {
+		// Al insertar elementos con appendChild se clona el anterior. Por lo tanto, remover desde el primer elemento existente.
+		while (gastoListado.firstChild) {
+			gastoListado.removeChild(gastoListado.firstChild);
+		}
+	}
 }
 
 const ui = new UI();
