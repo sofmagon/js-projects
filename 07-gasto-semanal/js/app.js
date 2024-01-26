@@ -83,10 +83,13 @@ function agregarGasto(e) {
 	// Leer los dos inputs
 	const nombreGasto = document.querySelector('#gasto').value;
 	const cantidadGasto = document.querySelector('#cantidad').value;
-	// Validar
+	// Validaciones. return evita que se ejecute código fuera de las condiciones
 	if (nombreGasto === '' || cantidadGasto === '') {
 		ui.imprimirAlerta('Ambos campos son obligatorios', 'error');
 	} else if (cantidadGasto <= 0 || isNaN(cantidadGasto)) {
-		ui.imprimirAlerta('Cantidad no válida', 'error')
+		ui.imprimirAlerta('Cantidad no válida', 'error');
+		return;
 	}
+
+	console.log('Agregando gasto');
 }
