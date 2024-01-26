@@ -48,6 +48,11 @@ class UI {
 		divAlerta.textContent = mensaje;
 		// Insertar en el HTML
 		document.querySelector('.primario').insertBefore(divAlerta, formulario);
+
+		// Remover la alerta después de 300ms
+		setTimeout(() => {
+			divAlerta.remove();
+		}, 3000);
 	}
 }
 
