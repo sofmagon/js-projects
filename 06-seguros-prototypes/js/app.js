@@ -18,6 +18,7 @@ Seguro.prototype.cotizarSeguro = function () {
 	const precioBase = 2000;
 	let precioFinal;
 
+	// Calculando el precio final
 	switch (this.marca) {
 		case '1':
 			precioFinal = precioBase * 1.15;
@@ -32,7 +33,7 @@ Seguro.prototype.cotizarSeguro = function () {
 			break;
 	}
 
-	// Por cada año que el año seleccionado sea más viejo que el actual, el precio final se reducirá un 3%
+	// Descuento del 3% por cada año que el año seleccionado sea más viejo que el actual
 	const diferencia = new Date().getFullYear() - this.year;
 	precioFinal -= ((diferencia * 3) * precioFinal) / 100;
 
