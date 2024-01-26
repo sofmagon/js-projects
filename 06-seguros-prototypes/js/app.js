@@ -92,6 +92,20 @@ UI.prototype.mostrarMensaje = (mensaje, tipo) => {
 	}, 3000);
 }
 
+// Proto. Mostrar el detalle del seguro cotizado y la cantidad total
+UI.prototype.mostrarResultado = (total, seguro) => {
+	const div = document.createElement('DIV');
+	div.classList.add('mt-10');
+	div.innerHTML = `
+		<p class="header">Tu Resumen</p>
+		<p class="font-bold">Total: ${total}</p>
+	`;
+
+	// Colocándolo en el HTML
+	const resultadoDiv = document.querySelector('#resultado');
+	resultadoDiv.appendChild(div);
+}
+
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
 	// Generando los años del select
@@ -123,5 +137,7 @@ function cotizarSeguro(e) {
 
 	// Después de la validación, instanciar el objeto Seguro recibiendo como parámetros las variables ya obtenidas
 	const seguro = new Seguro(marca, year, tipo);
-	seguro.cotizarSeguro();
+	const total = seguro.cotizarSeguro();
+
+	ui.mostrarResultado(total, seguro);
 }
