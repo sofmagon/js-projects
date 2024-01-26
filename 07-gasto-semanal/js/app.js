@@ -25,6 +25,16 @@ class Presupuesto {
 	nuevoGasto(gasto) {
 		// Hacer una copia del array como esté y agregando el nuevo gasto
 		this.gastos = [...this.gastos, gasto];
+		this.calcularRestante();
+	}
+
+	calcularRestante() {
+		// Iterando sobre el array de gastos para acumular la cantidad gastada
+		const gastado = this.gastos.reduce((total, gasto) => total + gasto.cantidadGasto, 0);
+		// Calcular el restante
+		this.restante = this.presupuesto - gastado;
+
+		// .- para sacar el restante de este ámbito, hay que agregarla al destructuring del objeto presupuesto ya que existe en este objeto.
 	}
 }
 
@@ -142,7 +152,7 @@ function agregarGasto(e) {
 	// Agrega un nuevo gasto recibiendo el nuevo objeto
 	presupuesto.nuevoGasto(gasto);
 	// Imprimir gasto aplicando destructuring al objeto presupuesto
-	const { gastos } = presupuesto;
+	const { gastos, restante } = presupuesto;
 	ui.agregarGastoListado(gastos);
 	// Imprimir alerta; sin tipo, lo hace exitosa
 	ui.imprimirAlerta('Gasto agregado correctamente');
