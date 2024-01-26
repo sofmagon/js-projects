@@ -55,3 +55,14 @@ function preguntarPresupuesto() {
 	// Insertar presupuesto y restante en el HTML
 	ui.insertarPresupuesto(presupuesto);
 }
+
+function agregarGasto(e) {
+	e.preventDefault();
+	// Leer los dos inputs
+	const nombreGasto = document.querySelector('#gasto').value;
+	const cantidadGasto = document.querySelector('#cantidad').value;
+	// Validar
+	if (nombreGasto === '' || cantidadGasto === '') {
+		console.log('Ambos campos son obligatorios');
+	}
+}
