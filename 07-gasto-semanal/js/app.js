@@ -93,7 +93,10 @@ function agregarGasto(e) {
 
 	// console.log('Agregando gasto');
 
-	// Generar un objeto con el gasto. Esta sintaxis es lo contrario al destructing, se conoce como Object Literal Enhancement
-	const gasto = { nombreGasto, cantidadGasto };
+	/*
+	Generar un objeto con el gasto. Esta sintaxis es lo contrario al destructing, se conoce como Object Literal Enhancement.
+	- Date.now() obtiene los ms transcurridos desde Enero 01, 1970 hasta la fecha, lo cual es un buen método para generar ID únicos.
+	*/
+	const gasto = { nombreGasto, cantidadGasto, id: Date.now() };
 	console.log(gasto);
 }
