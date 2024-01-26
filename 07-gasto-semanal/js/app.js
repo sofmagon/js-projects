@@ -32,6 +32,23 @@ class UI {
 		document.querySelector('#total').textContent = presupuesto;
 		document.querySelector('#restante').textContent = restante;
 	}
+
+	// Genera alertas reutilizables
+	imprimirAlerta(mensaje, tipo) {
+		const divAlerta = document.createElement('DIV');
+		divAlerta.classList.add('text-center', 'alert');
+
+		if (tipo === 'error') {
+			divAlerta.classList.add('alert-danger')
+		} else {
+			divAlerta.classList.add('alert-success');
+		}
+
+		// Agregar texto a esa alerta
+		divAlerta.textContent = mensaje;
+		// Insertar en el HTML
+		document.querySelector('.primario').insertBefore(divAlerta, formulario);
+	}
 }
 
 const ui = new UI();
@@ -63,6 +80,6 @@ function agregarGasto(e) {
 	const cantidadGasto = document.querySelector('#cantidad').value;
 	// Validar
 	if (nombreGasto === '' || cantidadGasto === '') {
-		console.log('Ambos campos son obligatorios');
+		ui.imprimirAlerta('Ambos campos son obligatorios', 'error');
 	}
 }
