@@ -106,6 +106,10 @@ class UI {
 			gastoListado.removeChild(gastoListado.firstChild);
 		}
 	}
+
+	actualizarRestante(restante) {
+		document.querySelector('#restante').textContent = restante;
+	}
 }
 
 const ui = new UI();
@@ -156,6 +160,8 @@ function agregarGasto(e) {
 	ui.agregarGastoListado(gastos);
 	// Imprimir alerta; sin tipo, lo hace exitosa
 	ui.imprimirAlerta('Gasto agregado correctamente');
+	// Actualizar dinero restante
+	ui.actualizarRestante(restante);
 	// Limpiar formulario una vez agregado el gasto
 	formulario.reset();
 }
