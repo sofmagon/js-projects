@@ -23,7 +23,11 @@ class Presupuesto {
 	}
 
 	nuevoGasto(gasto) {
-		console.log(gasto);
+		// console.log(gasto);
+
+		// Hacer una copia del array como esté y agregando el nuevo gasto
+		this.gastos = [...this.gastos, gasto];
+		console.log(this.gastos);
 	}
 }
 
@@ -105,6 +109,4 @@ function agregarGasto(e) {
 
 	// Agrega un nuevo gasto recibiendo el nuevo objeto
 	presupuesto.nuevoGasto(gasto);
-
-	// console.log(gasto);
 }
