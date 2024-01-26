@@ -76,7 +76,7 @@ class UI {
 	}
 
 	// .- Método que toma como referencia el destructuring del objeto presupuesto
-	agregarGastoListado(gastos) {
+	mostrarGastos(gastos) {
 		// Primero eliminar cualquier gasto agregado, para evitar duplicados. El uso de this es porque convive en la misma clase.
 		this.limpiarHTML();
 
@@ -187,7 +187,7 @@ function agregarGasto(e) {
 	presupuesto.nuevoGasto(gasto);
 	// Imprimir gasto aplicando destructuring al objeto presupuesto
 	const { gastos, restante } = presupuesto;
-	ui.agregarGastoListado(gastos);
+	ui.mostrarGastos(gastos);
 	// Imprimir alerta; sin tipo, lo hace exitosa
 	ui.imprimirAlerta('Gasto agregado correctamente');
 	// Actualizar dinero restante
