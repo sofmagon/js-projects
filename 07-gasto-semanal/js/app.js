@@ -34,7 +34,7 @@ class Presupuesto {
 		// Calcular el restante
 		this.restante = this.presupuesto - gastado;
 
-		// .- para sacar el restante de este ámbito, hay que agregarla al destructuring del objeto presupuesto ya que existe en este objeto.
+		// .- para sacar el restante de este ámbito, hay que agregarla al destructuring del objeto presupuesto en la función agregarGasto.
 	}
 }
 
