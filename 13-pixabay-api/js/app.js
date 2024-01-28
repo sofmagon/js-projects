@@ -1,6 +1,7 @@
 // Variables
 const formulario = document.querySelector('#formulario');
 const resultado = document.querySelector('#resultado');
+const paginacionDiv = document.querySelector('#paginacion');
 const registrosPorPagina = 40;
 let totalPaginas;
 let iterador;
@@ -114,9 +115,11 @@ function imprimirPaginador() {
 	// console.log(iterador.next());
 
 	while (true) {
-		const { value, iterador } = iterador.next();
-		// Si ya terminó, no hacer nada
+		// Destructuring
+		const { value, done } = iterador.next();
+		// Si ya llegó al final, no hacer nada
 		if (done) return;
+
 		// Caso contrario, crea un botón por cada elemento del generador (paginador)
 		const boton = document.createElement('A');
 		boton.href = '#';
@@ -124,5 +127,6 @@ function imprimirPaginador() {
 		boton.dataset.pagina = value;
 		boton.textContent = value;
 		boton.classList.add('siguiente', 'bg-yellow-400', 'px-4', 'py-1', 'mr-2', 'font-bold', 'mb-10', 'uppercase', 'rounded');
+		paginacionDiv.appendChild(boton);
 	}
 }
