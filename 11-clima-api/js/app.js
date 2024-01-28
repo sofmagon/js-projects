@@ -84,3 +84,9 @@ function mostrarClima(datos) {
 	resultadoDiv.appendChild(actual);
 	resultado.appendChild(resultadoDiv);
 }
+
+function limpiarHTML() {
+	while (resultado.firstChild()) {
+		resultado.removeChild(resultado.firstChild);
+	}
+}
