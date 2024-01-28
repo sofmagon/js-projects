@@ -17,7 +17,7 @@ function validarFormulario(e) {
 		return;
 	}
 
-	buscarImagenes();
+	buscarImagenes(terminoBusqueda);
 }
 
 function mostrarAlerta(mensaje) {
