@@ -28,4 +28,8 @@ function mostrarAlerta(mensaje) {
 	`;
 	// Insertando la alerta en HTML
 	formulario.appendChild(alerta);
+	// Eliminar la alerta después de 3 segundos
+	setTimeout(() => {
+		alerta.remove();
+	}, 3000);
 }
