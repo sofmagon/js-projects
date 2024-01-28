@@ -13,7 +13,11 @@ function validarFormulario(e) {
 
 	const terminoBusqueda = document.querySelector('#termino').value;
 	if (terminoBusqueda === '') {
-		console.log('Agrega un término de búsqueda');
+		mostrarAlerta('Ingresa un término de búsqueda');
 		return;
 	}
+}
+
+function mostrarAlerta(mensaje) {
+
 }
