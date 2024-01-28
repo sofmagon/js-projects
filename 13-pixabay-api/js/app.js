@@ -16,6 +16,8 @@ function validarFormulario(e) {
 		mostrarAlerta('Ingresa un término de búsqueda');
 		return;
 	}
+
+	buscarImagenes();
 }
 
 function mostrarAlerta(mensaje) {
@@ -36,4 +38,10 @@ function mostrarAlerta(mensaje) {
 			alerta.remove();
 		}, 3000);
 	}
+}
+
+function buscarImagenes(termino) {
+	const APIkey = '37139059-b0ef9a169f9e4cc2ee7649ba0';
+	// Se adapta la URL de la documentación a las variables
+	const url = `https://pixabay.com/api/?key=${APIkey}&q=${termino}`;
 }
