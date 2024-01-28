@@ -1,6 +1,7 @@
 // Variables
 const formulario = document.querySelector('#formulario');
 const resultado = document.querySelector('#resultado');
+const registrosPorPagina = 40;
 
 // Eventos
 window.onload = () => {
@@ -52,6 +53,11 @@ function buscarImagenes(termino) {
 			console.log(resultado);
 			mostrarImagenes(resultado.hits);
 		})
+}
+
+function calcularPaginas(total) {
+	// .ceil redondea hacia arriba porque al generar la paginación hay que cubrir todos los elementos obtenidos
+	return parseInt(Math.ceil(total / registrosPorPagina));
 }
 
 function mostrarImagenes(imagenes) {
