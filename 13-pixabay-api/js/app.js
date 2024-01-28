@@ -110,7 +110,7 @@ function mostrarImagenes(imagenes) {
 		paginacionDiv.removeChild(paginacionDiv.firstChild)
 	}
 
-	// Después de iterar y generar el HTML para todas las cards de imágenes, generar la paginación
+	// Después de iterar y generar el HTML para todas las cards de imágenes, generar el HTML de la paginación
 	imprimirPaginador()
 }
 
