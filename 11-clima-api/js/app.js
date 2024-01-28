@@ -19,6 +19,9 @@ function buscarClima(e) {
 		mostrarError('Ambos campos son obligatorios');
 		return;
 	}
+
+	// Aprobada la validación
+	consultarAPI(ciudad, pais);
 }
 
 function mostrarError(mensaje) {
@@ -43,4 +46,8 @@ function mostrarError(mensaje) {
 			alerta.remove();
 		}, 5000);
 	}
+}
+
+function consultarAPI(ciudad, pais) {
+
 }
