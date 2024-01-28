@@ -25,8 +25,6 @@ function buscarClima(e) {
 }
 
 function mostrarError(mensaje) {
-	console.log(mensaje);
-
 	// Verificar si ya existe una alerta
 	const alerta = document.querySelector('.bg-red-100');
 	if (!alerta) {
@@ -49,5 +47,10 @@ function mostrarError(mensaje) {
 }
 
 function consultarAPI(ciudad, pais) {
+	const appID = '74314bbedf4e498a770529a9de3232ec';
+	// Se adapta la URL de la documentación a las variables
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appID}`;
 
+	// Responde con una URL y al abrirla se visualiza un JSON con la información requerida
+	console.log(url);
 }
