@@ -5,6 +5,8 @@ const paginacionDiv = document.querySelector('#paginacion');
 const registrosPorPagina = 40;
 let totalPaginas;
 let iterador;
+// Por defecto la página actual será 1
+let paginaActual = 1;
 
 // Eventos
 window.onload = () => {
@@ -132,6 +134,11 @@ function imprimirPaginador() {
 		boton.dataset.pagina = value;
 		boton.textContent = value;
 		boton.classList.add('siguiente', 'bg-yellow-400', 'px-4', 'py-1', 'mr-2', 'font-bold', 'mb-4', 'rounded');
+		boton.onclick = () => {
+			paginaActual = value;
+			console.log(paginaActual);
+		}
+		// Incrustando el botón
 		paginacionDiv.appendChild(boton);
 	}
 }
