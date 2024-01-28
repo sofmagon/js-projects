@@ -62,7 +62,8 @@ function mostrarImagenes(imagenes) {
 
 	// Iterar sobre el array de imágenes y construir el HTML
 	imagenes.forEach(imagen => {
-		const { previewURL } = imagen;
+		// Destructuring del objeto respuesta
+		const { previewURL, likes, views, largeImageURL } = imagen;
 		resultado.innerHTML += `
 			<img class="w-full" src=${previewURL} alt={tags} />
 		`;
