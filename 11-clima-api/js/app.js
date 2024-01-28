@@ -57,6 +57,9 @@ function consultarAPI(ciudad, pais) {
 	fetch(url)
 		.then(respuesta => respuesta.json())
 		.then(datos => {
+			// Limpiar resultado previo
+			limpiarHTML();
+
 			console.log(datos);
 			// Evaluar si la ciudad no existe
 			if (datos.cod === '404') {
