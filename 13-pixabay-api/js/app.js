@@ -48,6 +48,23 @@ function buscarImagenes(termino) {
 	fetch(url)
 		.then(respuesta => respuesta.json())
 		.then(resultado => {
-			console.log(resultado.hits);
+			mostrarImagenes(resultado.hits);
 		})
+}
+
+function mostrarImagenes(imagenes) {
+	console.log(imagenes);
+
+	// Limpiar HTML de consulta previa
+	while (resultado.firstChild) {
+		resultado.removeChild(resultado.firstChild);
+	}
+
+	// Iterar sobre el array de imágenes y construir el HTML
+	imagenes.forEach(imagen => {
+		const { previewURL } = imagen;
+		resultado.innerHTML += `
+			<img class="w-full" src=${previewURL} alt={tags} />
+		`;
+	});
 }
