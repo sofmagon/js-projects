@@ -51,6 +51,10 @@ function buscarImagenes(termino) {
 		.then(resultado => {
 			// Visualizar el objeto y accediendo a su propiedad hits que contiene el array
 			console.log(resultado);
+			// totalHits contiene el número de imágenes permitido por la API, máximo 500
+			const totalPaginas = calcularPaginas(resultado.totalHits);
+			console.log(totalPaginas);
+			// hits contiene el array con los resultados
 			mostrarImagenes(resultado.hits);
 		})
 }
