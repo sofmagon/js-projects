@@ -50,7 +50,7 @@ function buscarImagenes(termino) {
 	fetch(url)
 		.then(respuesta => respuesta.json())
 		.then(resultado => {
-			// Visualizar el objeto y accediendo a su propiedad hits que contiene el array
+			// Visualizar el objeto
 			console.log(resultado);
 			// totalHits contiene el número de imágenes permitido por la API, máximo 500; para poder calcular la paginación
 			totalPaginas = calcularPaginas(resultado.totalHits);
