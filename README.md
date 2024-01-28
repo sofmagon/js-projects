@@ -24,7 +24,7 @@
 |          |                                                              |                                                   |
 | 11       | [Consumiento API: Clima](./11-clima-api)                     | [🚀](https://11-clima-api.netlify.app/)            |
 |          |                                                              |                                                   |
-|          |                                                              |                                                   |
+| 13       | [Consumiento API: Pixabay](./13-pixabay-api)                 |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
