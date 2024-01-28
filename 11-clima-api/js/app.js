@@ -74,7 +74,7 @@ function consultarAPI(ciudad, pais) {
 
 function mostrarClima(datos) {
 	// Nested Destructuring
-	const { main: { temp, temp_max, temp_min } } = datos;
+	const { name, main: { temp, temp_max, temp_min } } = datos;
 	// Convertir grados Kelvin a Celsius
 	const tempActual = convertirKelvin(temp);
 	const tempMax = convertirKelvin(temp_max);
