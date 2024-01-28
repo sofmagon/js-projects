@@ -23,7 +23,7 @@ function validarFormulario(e) {
 		return;
 	}
 
-	buscarImagenes(terminoBusqueda);
+	buscarImagenes();
 }
 
 function mostrarAlerta(mensaje) {
@@ -46,7 +46,8 @@ function mostrarAlerta(mensaje) {
 	}
 }
 
-function buscarImagenes(termino) {
+function buscarImagenes() {
+	const termino = document.querySelector('#termino').value;
 	const APIkey = '37139059-b0ef9a169f9e4cc2ee7649ba0';
 	// Se adapta la URL de la documentación a las variables
 	const url = `https://pixabay.com/api/?key=${APIkey}&q=${termino}&per_page=${registrosPorPagina}&page=${paginaActual}`;
@@ -136,7 +137,9 @@ function imprimirPaginador() {
 		boton.classList.add('siguiente', 'bg-yellow-400', 'px-4', 'py-1', 'mr-2', 'font-bold', 'mb-4', 'rounded');
 		boton.onclick = () => {
 			paginaActual = value;
-			console.log(paginaActual);
+			//console.log(paginaActual);
+			// Volver a consultar la API en la nueva página
+			buscarImagenes();
 		}
 		// Incrustando el botón
 		paginacionDiv.appendChild(boton);
