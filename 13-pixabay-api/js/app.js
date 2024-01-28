@@ -66,7 +66,17 @@ function mostrarImagenes(imagenes) {
 		const { previewURL, likes, views, largeImageURL } = imagen;
 		resultado.innerHTML += `
 			<div class="w-1/2 md:w-1/3 lg:w-1/4 p-3 mb-4">
-				<img class="w-full" src="${previewURL}"/>
+				<div class="bg-white">
+					<img class="w-full" src="${previewURL}"/>
+					<div class="p-4">
+                        <p class="font-bold">${likes} <span class="font-light"> Me Gusta</span></p>
+
+						<p class="font-bold">${views} <span class="font-light"> Veces vista</span></p>
+
+						<a href=${largeImageURL} rel="noopener noreferrer"
+                        target="_blank" class="bg-blue-800 w-full p-1 block mt-5 rounded text-center font-bold uppercase hover:bg-blue-500 text-white">Ver Imagen</a>
+                    </div>
+				</div>
 			</div>
 		`;
 	});
