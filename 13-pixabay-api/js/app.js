@@ -3,6 +3,7 @@ const formulario = document.querySelector('#formulario');
 const resultado = document.querySelector('#resultado');
 const registrosPorPagina = 40;
 let totalPaginas;
+let iterador;
 
 // Eventos
 window.onload = () => {
@@ -62,8 +63,8 @@ function buscarImagenes(termino) {
 
 // Generador que va a registrar la cantidad de elementos de acuerdo a las páginas necesarias
 function* crearPaginador(total) {
+	console.log(total);
 	for (let i = 1; i <= total; i++) {
-		// console.log(i);
 		// Registrar los valores internamente del generador
 		yield i;
 	}
@@ -105,7 +106,5 @@ function mostrarImagenes(imagenes) {
 	});
 
 	// Después de iterar y generar el HTML para todas las cards de imágenes, generar la paginación
-	const iterador = crearPaginador(totalPaginas);
-	// Visualizar la cantidad de páginas
-	console.log(iterador.next());
+	iterador = crearPaginador(totalPaginas);
 }
