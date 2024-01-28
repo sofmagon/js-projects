@@ -48,6 +48,7 @@ function buscarImagenes(termino) {
 	fetch(url)
 		.then(respuesta => respuesta.json())
 		.then(resultado => {
+			// Visualizar el objeto y accediendo a su propiedad hits que contiene el array
 			console.log(resultado);
 			mostrarImagenes(resultado.hits);
 		})
