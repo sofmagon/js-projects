@@ -22,7 +22,7 @@
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
-| 11       | [Consumiento API: Clima](./11-clima-api)                     |                                                   |
+| 11       | [Consumiento API: Clima](./11-clima-api)                     | [🚀](https://11-clima-api.netlify.app/)            |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
