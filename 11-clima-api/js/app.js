@@ -37,5 +37,10 @@ function mostrarError(mensaje) {
 		`;
 
 		container.appendChild(alerta);
+
+		// Remover la alerta después de 5 segundos
+		setTimeout(() => {
+			alerta.remove();
+		}, 5000);
 	}
 }
