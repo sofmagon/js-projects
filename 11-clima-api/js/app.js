@@ -118,6 +118,9 @@ function limpiarHTML() {
 }
 
 function Spinner() {
+	// Limpiar HTML previo
+	limpiarHTML();
+
 	// Creando el spinner con scripting
 	const divSpinner = document.createElement('DIV');
 	divSpinner.classList.add('sk-fading-circle');
