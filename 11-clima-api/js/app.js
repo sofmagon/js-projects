@@ -75,18 +75,30 @@ function consultarAPI(ciudad, pais) {
 function mostrarClima(datos) {
 	// Nested Destructuring
 	const { main: { temp, temp_max, temp_min } } = datos;
-	console.log(temp);
 	// Convertir grados Kelvin a Celsius
 	const tempActual = convertirKelvin(temp);
 	const tempMax = convertirKelvin(temp_max);
 	const tempMin = convertirKelvin(temp_min);
+
 	// Mostrar la temperatura actual
 	const actual = document.createElement('P');
 	actual.innerHTML = `${tempActual} &#8451;`;
 	actual.classList.add('font-bold', 'text-6xl');
+	// Mostrar la temperatura máxima
+	const maxima = document.createElement('P');
+	maxima.innerHTML = `Max: ${tempMax} &#8451;`;
+	maxima.classList.add('text-xl');
+	// Mostrar la temperatura mínima
+	const minima = document.createElement('P');
+	minima.innerHTML = `Min: ${tempMin} &#8451;`;
+	minima.classList.add('text-xl');
+
+	// Insertar en el HTML
 	const resultadoDiv = document.createElement('DIV');
 	resultadoDiv.classList.add('text-center', 'text-white');
 	resultadoDiv.appendChild(actual);
+	resultadoDiv.appendChild(maxima);
+	resultadoDiv.appendChild(minima);
 	resultado.appendChild(resultadoDiv);
 }
 
