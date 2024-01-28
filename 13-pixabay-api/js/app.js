@@ -48,11 +48,13 @@ function buscarImagenes(termino) {
 	fetch(url)
 		.then(respuesta => respuesta.json())
 		.then(resultado => {
+			console.log(resultado);
 			mostrarImagenes(resultado.hits);
 		})
 }
 
 function mostrarImagenes(imagenes) {
+	// Visualizar el array
 	console.log(imagenes);
 
 	// Limpiar HTML de consulta previa
