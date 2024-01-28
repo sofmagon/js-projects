@@ -80,6 +80,11 @@ function mostrarClima(datos) {
 	const tempMax = convertirKelvin(temp_max);
 	const tempMin = convertirKelvin(temp_min);
 
+	// Mostrar el nombre de la ciudad
+	const nombreCiudad = document.createElement('P');
+	nombreCiudad.textContent = `Clima en ${name}`;
+	nombreCiudad.classList.add('font-bold', 'text-2xl');
+
 	// Mostrar la temperatura actual
 	const actual = document.createElement('P');
 	actual.innerHTML = `${tempActual} &#8451;`;
@@ -96,6 +101,7 @@ function mostrarClima(datos) {
 	// Insertar en el HTML
 	const resultadoDiv = document.createElement('DIV');
 	resultadoDiv.classList.add('text-center', 'text-white');
+	resultadoDiv.appendChild(nombreCiudad);
 	resultadoDiv.appendChild(actual);
 	resultadoDiv.appendChild(maxima);
 	resultadoDiv.appendChild(minima);
