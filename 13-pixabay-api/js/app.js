@@ -46,7 +46,7 @@ function mostrarAlerta(mensaje) {
 function buscarImagenes(termino) {
 	const APIkey = '37139059-b0ef9a169f9e4cc2ee7649ba0';
 	// Se adapta la URL de la documentación a las variables
-	const url = `https://pixabay.com/api/?key=${APIkey}&q=${termino}&per_page=200`;
+	const url = `https://pixabay.com/api/?key=${APIkey}&q=${termino}&per_page=${registrosPorPagina}`;
 
 	fetch(url)
 		.then(respuesta => respuesta.json())
