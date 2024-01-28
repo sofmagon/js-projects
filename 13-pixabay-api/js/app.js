@@ -61,9 +61,8 @@ function buscarImagenes(termino) {
 		})
 }
 
-// Generador que va a registrar la cantidad de elementos de acuerdo al total de páginas necesarias
+// Generador que va a registrar la cantidad de páginas de acuerdo al total de páginas calculado previamente
 function* crearPaginador(total) {
-	console.log(total);
 	for (let i = 1; i <= total; i++) {
 		// Registrar los valores internamente del generador
 		yield i;
