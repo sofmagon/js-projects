@@ -110,4 +110,19 @@ function mostrarImagenes(imagenes) {
 
 function imprimirPaginador() {
 	iterador = crearPaginador(totalPaginas);
+	// .next devuelve un objeto con las propiedades: done (booleano) y value (valor registrado de yield)
+	// console.log(iterador.next());
+
+	while (true) {
+		const { value, iterador } = iterador.next();
+		// Si ya terminó, no hacer nada
+		if (done) return;
+		// Caso contrario, crea un botón por cada elemento del generador (paginador)
+		const boton = document.createElement('A');
+		boton.href = '#';
+		// Incrustando el valor de la paginación en un atributo personalizado
+		boton.dataset.pagina = value;
+		boton.textContent = value;
+		boton.classList.add('siguiente', 'bg-yellow-400', 'px-4', 'py-1', 'mr-2', 'font-bold', 'mb-10', 'uppercase', 'rounded');
+	}
 }
