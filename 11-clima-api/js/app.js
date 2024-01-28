@@ -12,5 +12,16 @@ window.addEventListener('load', () => {
 function buscarClima(e) {
 	e.preventDefault();
 
-	console.log('...Buscando el clima');
+	// Validar
+	const ciudad = document.querySelector('#ciudad').value;
+	const pais = document.querySelector('#pais').value;
+
+	if (ciudad === '' || pais === '') {
+		mostrarError('Ambos campos son obligatorios');
+		return;
+	}
+}
+
+function mostrarError(mensaje) {
+	console.log(mensaje);
 }
