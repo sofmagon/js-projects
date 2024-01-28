@@ -54,6 +54,9 @@ function consultarAPI(ciudad, pais) {
 	// Responde con una URL y al abrirla se visualiza un JSON con la información requerida
 	// console.log(url);
 
+	// Mostrar el spinner antes de recibir la respuesta
+	Spinner();
+
 	fetch(url)
 		.then(respuesta => respuesta.json())
 		.then(datos => {
