@@ -12,10 +12,9 @@ window.addEventListener('load', () => {
 function buscarClima(e) {
 	e.preventDefault();
 
-	// Validar
+	// Validar campos
 	const ciudad = document.querySelector('#ciudad').value;
 	const pais = document.querySelector('#pais').value;
-
 	if (ciudad === '' || pais === '') {
 		mostrarError('Ambos campos son obligatorios');
 		return;
