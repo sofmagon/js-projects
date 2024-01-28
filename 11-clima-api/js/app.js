@@ -77,7 +77,7 @@ function mostrarClima(datos) {
 	const { main: { temp, temp_max, temp_min } } = datos;
 	console.log(temp);
 	// Convertir grados Kelvin a Celsius
-	const centigrados = temp - 273.15;
+	const centigrados = convertirKelvin(temp);
 	// Mostrar la temperatura actual
 	const actual = document.createElement('P');
 	actual.innerHTML = `${centigrados} &#8451;`;
