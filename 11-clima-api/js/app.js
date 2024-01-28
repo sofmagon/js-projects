@@ -52,5 +52,9 @@ function consultarAPI(ciudad, pais) {
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appID}`;
 
 	// Responde con una URL y al abrirla se visualiza un JSON con la información requerida
-	console.log(url);
+	// console.log(url);
+
+	fetch(url)
+		.then(respuesta => respuesta.json())
+		.then(datos => console.log(datos))
 }
