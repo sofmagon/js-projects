@@ -20,4 +20,4 @@ Creation: 2024/01/28
 Last update: 2024/01/28
 Doctype: HTML5
 Language: Spanish | Español
-Technologies: HTML, CSS, JavaScript
+Technologies: HTML, CSS, JavaScript 
