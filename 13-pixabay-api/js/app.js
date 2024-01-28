@@ -105,6 +105,11 @@ function mostrarImagenes(imagenes) {
 		`;
 	});
 
+	// Limpiar paginador previo
+	while (paginacionDiv.firstChild) {
+		paginacionDiv.removeChild(paginacionDiv.firstChild)
+	}
+
 	// Después de iterar y generar el HTML para todas las cards de imágenes, generar la paginación
 	imprimirPaginador()
 }
