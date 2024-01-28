@@ -57,7 +57,7 @@ function buscarImagenes() {
 		.then(resultado => {
 			// Visualizar el objeto
 			console.log(resultado);
-			// totalHits contiene el número de imágenes permitido por la API, máximo 500; para poder calcular la paginación
+			// totalHits contiene el número de imágenes permitido por la API (máximo 500) para poder calcular la paginación. La función calcula por cada 40.
 			totalPaginas = calcularPaginas(resultado.totalHits);
 			console.log(totalPaginas);
 			// hits contiene el array con los resultados
@@ -65,7 +65,7 @@ function buscarImagenes() {
 		})
 }
 
-// Generador que va a registrar la cantidad de páginas de acuerdo al total de páginas calculado previamente
+// Generador que registra cuántas páginas habrá con base al total de páginas calculado previamente
 function* crearPaginador(total) {
 	for (let i = 1; i <= total; i++) {
 		// Registrar los valores internamente del generador
