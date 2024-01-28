@@ -60,6 +60,13 @@ function buscarImagenes(termino) {
 		})
 }
 
+// Generador que va a registrar la cantidad de elementos de acuerdo a las páginas necesarias
+function* crearPaginador(total) {
+	for (let i = 1; i <= total; i++) {
+		console.log(i);
+	}
+}
+
 function calcularPaginas(total) {
 	// .ceil redondea hacia arriba porque al generar la paginación hay que cubrir todos los elementos obtenidos
 	return parseInt(Math.ceil(total / registrosPorPagina));
@@ -94,4 +101,9 @@ function mostrarImagenes(imagenes) {
 			</div>
 		`;
 	});
+
+	// Después de iterar y generar el HTML para todas las cards de imágenes, generar la paginación
+	const iterador = crearPaginador(totalPaginas);
+	// Visualizar la cantidad de páginas
+	console.log(iterador.next());
 }
