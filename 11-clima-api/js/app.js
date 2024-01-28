@@ -9,6 +9,8 @@ window.addEventListener('load', () => {
 })
 
 // Funciones
-function buscarClima() {
+function buscarClima(e) {
+	e.preventDefault();
 
+	console.log('...Buscando el clima');
 }
