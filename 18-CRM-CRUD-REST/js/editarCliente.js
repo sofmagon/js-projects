@@ -10,6 +10,12 @@ import { obtenerCliente } from "./API.js";
 		const idCliente = parseInt(parametrosURL.get('id'));
 		// Almacenando el objeto obtenido por la API
 		const cliente = await obtenerCliente(idCliente);
-		console.log(cliente);
-	})
+		// Mostrar detalle del cliente
+		mostrarCliente(cliente);
+	});
+
+	function mostrarCliente(cliente) {
+		// Destructuring del objeto obtenido por la API
+		const { nombre, email, telefono, empresa } = cliente;
+	}
 })();
