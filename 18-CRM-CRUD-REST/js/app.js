@@ -1,3 +1,5 @@
+import { obtenerClientes } from "./API.js";
+
 (function () {
 	const listado = document.querySelector('#listado-clientes');
 
