@@ -5,8 +5,9 @@ import { obtenerClientes } from "./API.js";
 
 	document.addEventListener('DOMContentLoaded', mostrarClientes);
 
-	function mostrarClientes() {
-		const clientes = obtenerClientes();
+	async function mostrarClientes() {
+		const clientes = await obtenerClientes();
+		// Async/await permite bloquear el clg hasta que DOMContentLoaded esté listo o seguirá mostrando pending
 		console.log(clientes);
 	}
 })();
