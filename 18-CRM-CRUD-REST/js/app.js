@@ -5,6 +5,8 @@ import { obtenerClientes } from "./API.js";
 
 	document.addEventListener('DOMContentLoaded', mostrarClientes);
 
+	listado.addEventListener('click', confirmarEliminacion);
+
 	async function mostrarClientes() {
 		const clientes = await obtenerClientes();
 		// Async/await permite bloquear el siguiente código hasta que DOMContentLoaded esté listo o seguirá mostrando pending
@@ -38,5 +40,12 @@ import { obtenerClientes } from "./API.js";
 			// Insertando las filas al HTML
 			listado.appendChild(row);
 		});
+	}
+
+	function confirmarEliminacion(e) {
+		// Si se dio click al botón eliminar
+		if (e.target.classList.contains('.eliminar')) {
+
+		}
 	}
 })();
