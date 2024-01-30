@@ -1,6 +1,6 @@
 const url = 'http://localhost:4000/clientes';
 
-// 1. Cuando se crea un nuevo cliente
+// 1. Crea un nuevo cliente
 export const nuevoCliente = async cliente => {
 	// console.log(cliente);
 
@@ -30,6 +30,18 @@ export const obtenerClientes = async () => {
 		const clientes = await resultado.json();
 		// Se retorna para consumir esa información en otro archivo
 		return clientes;
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+// 3. Elimina un cliente
+export const eliminarCliente = async id => {
+	try {
+		// based on DOCS: DELETE /posts/:id
+		await fetch(`${url}/${id}`, {
+			method: 'DELETE'
+		});
 	} catch (error) {
 		console.log(error);
 	}
