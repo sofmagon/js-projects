@@ -1,4 +1,5 @@
 import { mostrarAlerta } from './funciones.js';
+import { nuevoCliente } from './API.js';
 
 // IIFE
 (function () {
@@ -27,7 +28,7 @@ import { mostrarAlerta } from './funciones.js';
 			return;
 		}
 
-		console.log('...Validación aprobada');
+		nuevoCliente(cliente);
 	}
 
 	function validar(obj) {
