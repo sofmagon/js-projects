@@ -19,7 +19,17 @@
 			empresa
 		}
 
+		if (validar(cliente)) {
+			// Mostrar mensaje
+			console.log('Todos los campos son obligatorios');
+			return;
+		}
+
+		console.log('...Validación aprobada');
+	}
+
+	function validar(obj) {
 		// Si al menos uno está vacío retorna true
-		console.log(!Object.values(cliente).every(input => input !== ''));
+		return !Object.values(obj).every(input => input !== '');
 	}
 })();
