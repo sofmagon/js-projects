@@ -47,6 +47,11 @@ import { obtenerClientes } from "./API.js";
 		if (e.target.classList.contains('eliminar')) {
 			// Leyendo el valor del atributo personalizado para identificar el elemento deseado
 			const clienteID = parseInt(e.target.dataset.cliente);
+
+			const confirmar = confirm('¿Deseas eliminar este cliente?');
+			if (confirmar) {
+				console.log('...Eliminando', clienteID);
+			}
 		}
 	}
 })();
