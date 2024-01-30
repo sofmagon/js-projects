@@ -1,4 +1,4 @@
-import { obtenerClientes } from "./API.js";
+import { obtenerClientes, eliminarCliente } from "./API.js";
 
 (function () {
 	const listado = document.querySelector('#listado-clientes');
@@ -50,7 +50,7 @@ import { obtenerClientes } from "./API.js";
 
 			const confirmar = confirm('¿Deseas eliminar este cliente?');
 			if (confirmar) {
-				console.log('...Eliminando', clienteID);
+				eliminarCliente(clienteID);
 			}
 		}
 	}
