@@ -12,7 +12,9 @@ export const nuevoCliente = async cliente => {
 				// esto no sube archivos, sólo texto en JSON
 				'Content-Type': 'application/json'
 			}
-		})
+		});
+		// Una vez completada la acción (POST), dirigir al home
+		window.location.href = 'index.html';
 	} catch (error) {
 		console.log(error);
 	}
