@@ -23,5 +23,10 @@ import { obtenerCliente } from "./API.js";
 	function mostrarCliente(cliente) {
 		// Destructuring del objeto obtenido por la API
 		const { nombre, email, telefono, empresa } = cliente;
+		nombreInput.value = nombre;
+		emailInput.value = email;
+		telefonoInput.value = telefono;
+		empresaInput.value = empresa;
+		idInput.value = id;
 	}
 })();
