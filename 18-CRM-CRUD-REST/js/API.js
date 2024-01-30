@@ -50,6 +50,7 @@ export const eliminarCliente = async id => {
 // 4. Obtiene un cliente por su ID para poder editarlo
 export const obtenerCliente = async id => {
 	try {
+		// Obteniendo el objeto completo
 		const resultado = await fetch(`${url}/${id}`);
 		const cliente = await resultado.json();
 		console.log(cliente);
