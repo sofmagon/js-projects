@@ -8,8 +8,8 @@ import { obtenerClientes, eliminarCliente } from "./API.js";
 	listado.addEventListener('click', confirmarEliminacion);
 
 	async function mostrarClientes() {
+		// Async/await permite bloquear el siguiente código hasta que la promesa de la API esté lista
 		const clientes = await obtenerClientes();
-		// Async/await permite bloquear el siguiente código hasta que DOMContentLoaded esté listo o seguirá mostrando pending
 		// console.log(clientes);
 
 		// Recorrer el array de objetos
