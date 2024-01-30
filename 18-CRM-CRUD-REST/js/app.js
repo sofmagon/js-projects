@@ -6,6 +6,7 @@ import { obtenerClientes } from "./API.js";
 	document.addEventListener('DOMContentLoaded', mostrarClientes);
 
 	function mostrarClientes() {
-
+		const clientes = obtenerClientes();
+		console.log(clientes);
 	}
 })();
