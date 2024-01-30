@@ -44,8 +44,9 @@ import { obtenerClientes } from "./API.js";
 
 	function confirmarEliminacion(e) {
 		// Si se dio click al botón eliminar
-		if (e.target.classList.contains('.eliminar')) {
-
+		if (e.target.classList.contains('eliminar')) {
+			// Leyendo el valor del atributo personalizado para identificar el elemento deseado
+			const clienteID = parseInt(e.target.dataset.cliente);
 		}
 	}
 })();
