@@ -1,8 +1,14 @@
 import { obtenerCliente } from "./API.js";
 
 (function () {
-	// Async/await permite bloquear el siguiente código hasta que la promesa de la API esté lista
+	// Campos del formulario para la manipulación de datos
+	const nombreInput = document.querySelector('#nombre');
+	const emailInput = document.querySelector('#email');
+	const telefonoInput = document.querySelector('#telefono');
+	const empresaInput = document.querySelector('#empresa');
+	const idInput = document.querySelector('#id');
 
+	// Async/await permite bloquear el siguiente código hasta que la promesa de la API esté lista
 	document.addEventListener('DOMContentLoaded', async () => {
 		// URLSearchParams, define métodos para trabajar con los parámetros de búsqueda de una URL
 		const parametrosURL = new URLSearchParams(window.location.search);
