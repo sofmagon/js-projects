@@ -12,7 +12,6 @@ import { obtenerClientes, eliminarCliente } from "./API.js";
 		// Async/await permite bloquear el siguiente código hasta que DOMContentLoaded esté listo o seguirá mostrando pending
 		// console.log(clientes);
 
-
 		// Recorrer el array de objetos
 		clientes.forEach(cliente => {
 			// Destructuring
