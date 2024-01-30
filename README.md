@@ -28,6 +28,9 @@
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
+|          |                                                              |                                                   |
+| 18       | [CRM CRUD: API REST](./18-CRM-CRUD-REST)                     |                                                   |
+|          |                                                              |                                                   |
 
 
 
