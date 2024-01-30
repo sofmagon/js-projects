@@ -53,7 +53,8 @@ export const obtenerCliente = async id => {
 		// Obteniendo el objeto completo
 		const resultado = await fetch(`${url}/${id}`);
 		const cliente = await resultado.json();
-		console.log(cliente);
+		// console.log(cliente);
+		return cliente;
 	} catch (error) {
 		console.log(error);
 	}
