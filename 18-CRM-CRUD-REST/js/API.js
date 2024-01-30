@@ -1,5 +1,6 @@
 const url = 'http://localhost:4000/clientes';
 
+// 1. Cuando se crea un nuevo cliente
 export const nuevoCliente = async cliente => {
 	// console.log(cliente);
 
@@ -15,6 +16,20 @@ export const nuevoCliente = async cliente => {
 		});
 		// Una vez completada la acción (POST), dirigir al home
 		window.location.href = 'index.html';
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+// 2. Obtiene todos los clientes
+export const obtenerClientes = async () => {
+	try {
+		// Por default fetch envía GET, no hay que especificar un method
+		const resultado = await fetch(url);
+		// Doble await porque no se está usando axios, requiere que el anterior se haya cumplido
+		const clientes = await resultado.json();
+		// Se retorna para consumir esa información en otro archivo
+		return clientes;
 	} catch (error) {
 		console.log(error);
 	}
