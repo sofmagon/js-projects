@@ -22,7 +22,7 @@ Template created by [Juan De La Torre](https://codigoconjuan.com/)
 
 ## 🌎 Live demo
 
-[Click here]() 👈🏻
+[Click here](https://18-crm-crud-rest.netlify.app/) 👈🏻
 
 
 
