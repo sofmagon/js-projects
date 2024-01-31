@@ -45,7 +45,7 @@ import { mostrarAlerta, validar } from './funciones.js';
 			empresa: emailInput.value,
 			id: parseInt(idInput.value)
 		}
-		console.log(cliente);
+		//console.log(cliente);
 
 		if (validar(cliente)) {
 			// Mostrar mensaje
@@ -54,6 +54,6 @@ import { mostrarAlerta, validar } from './funciones.js';
 		}
 
 		// Una vez aprobada la validación, reescribir el objeto
-
+		editarCliente(cliente);
 	}
 })();
