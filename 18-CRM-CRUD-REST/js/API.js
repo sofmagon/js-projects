@@ -1,4 +1,4 @@
-const url = 'http://localhost:4000/clientes';
+const url = 'https://fakeapi-crm.vercel.app/clientes';
 
 // 1. Crea un nuevo cliente
 export const nuevoCliente = async cliente => {
