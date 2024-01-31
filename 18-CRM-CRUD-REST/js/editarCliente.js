@@ -32,4 +32,20 @@ import { obtenerCliente } from "./API.js";
 		empresaInput.value = empresa;
 		idInput.value = id;
 	}
+
+	function validarCliente(e) {
+		e.preventDefault();
+
+		// Objeto con los valores de los campos
+		const cliente = {
+			nombre: nombreInput.value,
+			email: emailInput.value,
+			telefono: telefonoInput.value,
+			empresa: emailInput.value,
+			id: parseInt(idInput.value)
+		}
+
+		console.log(cliente);
+
+	}
 })();
