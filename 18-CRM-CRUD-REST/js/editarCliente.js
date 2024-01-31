@@ -45,8 +45,12 @@ import { mostrarAlerta, validar } from './funciones.js';
 			empresa: emailInput.value,
 			id: parseInt(idInput.value)
 		}
-
 		console.log(cliente);
 
+		if (validar(cliente)) {
+			// Mostrar mensaje
+			mostrarAlerta('Todos los campos son obligatorios');
+			return;
+		}
 	}
 })();
