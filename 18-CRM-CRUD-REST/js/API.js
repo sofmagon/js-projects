@@ -59,3 +59,12 @@ export const obtenerCliente = async id => {
 		console.log(error);
 	}
 }
+
+// 5. Edita un registro
+export const editarCliente = cliente => {
+	try {
+		console.log(cliente);
+	} catch (error) {
+		console.log(error);
+	}
+}
