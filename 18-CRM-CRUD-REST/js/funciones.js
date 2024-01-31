@@ -21,3 +21,8 @@ export function mostrarAlerta(mensaje) {
 		}, 3000);
 	}
 }
+
+export function validar(obj) {
+	// Si al menos uno está vacío retorna true
+	return !Object.values(obj).every(input => input !== '');
+}
