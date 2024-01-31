@@ -67,7 +67,7 @@ export const editarCliente = async cliente => {
 			method: 'PUT',
 			body: JSON.stringify(cliente),
 			headers: {
-				'Content-Type': 'Application/json'
+				'Content-Type': 'application/json'
 			}
 		});
 		// Una vez completada la acción (PUT), dirigir al home
