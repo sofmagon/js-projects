@@ -1,4 +1,5 @@
 import { obtenerCliente } from "./API.js";
+import { mostrarAlerta, validar } from './funciones.js';
 
 (function () {
 	// Campos del formulario para la manipulación de datos
