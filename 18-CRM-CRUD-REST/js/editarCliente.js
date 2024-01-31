@@ -1,4 +1,4 @@
-import { obtenerCliente } from "./API.js";
+import { obtenerCliente, editarCliente } from "./API.js";
 import { mostrarAlerta, validar } from './funciones.js';
 
 (function () {
@@ -52,5 +52,8 @@ import { mostrarAlerta, validar } from './funciones.js';
 			mostrarAlerta('Todos los campos son obligatorios');
 			return;
 		}
+
+		// Una vez aprobada la validación, reescribir el objeto
+
 	}
 })();
