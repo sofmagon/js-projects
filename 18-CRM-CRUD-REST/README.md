@@ -12,7 +12,7 @@ Template created by [Juan De La Torre](https://codigoconjuan.com/)
 
 + Semantic HTML5 markup
 + Tailwind CSS
-+ JavaScript: JSON Server
++ JavaScript: JSON Server, Fetch, Async/Await
 
 
 
