@@ -1,6 +1,5 @@
-import { mostrarAlerta } from './funciones.js';
+import { mostrarAlerta, validar } from './funciones.js';
 import { nuevoCliente } from './API.js';
-import { validar } from './funciones.js';
 
 // IIFE
 (function () {
