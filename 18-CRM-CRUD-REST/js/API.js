@@ -50,8 +50,8 @@ export const eliminarCliente = async id => {
 // 4. Obtiene un cliente por su ID para poder editarlo
 export const obtenerCliente = async id => {
 	try {
-		// Obteniendo el objeto completo
 		const resultado = await fetch(`${url}/${id}`);
+		// Obteniendo el objeto completo
 		const cliente = await resultado.json();
 		// console.log(cliente);
 		return cliente;
@@ -61,9 +61,17 @@ export const obtenerCliente = async id => {
 }
 
 // 5. Edita un registro
-export const editarCliente = cliente => {
+export const editarCliente = async cliente => {
 	try {
-		console.log(cliente);
+		await fetch(`${url}/${cliente.id}`, {
+			method: 'PUT',
+			body: JSON.stringify(cliente),
+			headers: {
+				'Content-Type': 'Application/json'
+			}
+		});
+		// Una vez completada la acción (PUT), dirigir al home
+		window.location.href = 'index.html';
 	} catch (error) {
 		console.log(error);
 	}
