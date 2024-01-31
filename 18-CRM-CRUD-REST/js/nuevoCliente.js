@@ -23,7 +23,6 @@ import { nuevoCliente } from './API.js';
 		}
 
 		if (validar(cliente)) {
-			// Mostrar mensaje
 			mostrarAlerta('Todos los campos son obligatorios');
 			return;
 		}
