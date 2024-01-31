@@ -29,7 +29,7 @@
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
 |          |                                                              |                                                   |
-| 18       | [CRM CRUD: API REST](./18-CRM-CRUD-REST)                     |                                                   |
+| 18       | [CRM CRUD: API REST](./18-CRM-CRUD-REST)                     | [🚀](https://18-crm-crud-rest.netlify.app/)        |
 |          |                                                              |                                                   |
 
 
