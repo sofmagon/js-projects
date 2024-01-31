@@ -18,6 +18,9 @@ import { obtenerCliente } from "./API.js";
 		const cliente = await obtenerCliente(idCliente);
 		// Mostrar detalle del cliente
 		mostrarCliente(cliente);
+		// Evento submit al formulario
+		const formulario = document.querySelector('#formulario');
+		formulario.addEventListener('submit', validarCliente);
 	});
 
 	function mostrarCliente(cliente) {
