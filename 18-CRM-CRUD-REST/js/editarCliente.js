@@ -26,7 +26,7 @@ import { mostrarAlerta, validar } from './funciones.js';
 
 	function mostrarCliente(cliente) {
 		// Destructuring del objeto obtenido por la API
-		const { nombre, email, telefono, empresa } = cliente;
+		const { nombre, email, telefono, empresa, id } = cliente;
 		nombreInput.value = nombre;
 		emailInput.value = email;
 		telefonoInput.value = telefono;
@@ -48,7 +48,6 @@ import { mostrarAlerta, validar } from './funciones.js';
 		//console.log(cliente);
 
 		if (validar(cliente)) {
-			// Mostrar mensaje
 			mostrarAlerta('Todos los campos son obligatorios');
 			return;
 		}
